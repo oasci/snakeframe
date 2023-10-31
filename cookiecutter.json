@@ -1,0 +1,17 @@
+{
+  "project_name": "python_project",
+  "project_description": "Awesome `{{ cookiecutter.project_name }}` is a Python cli/package created with https://github.com/oasci/snakeframe",
+  "organization": "{{ cookiecutter.project_name }}",
+  "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"],
+  "_all_python_minor_version": ["11", "10", "9"],
+  "minimal_python_version": ["3.11", "3.10", "3.9"],
+  "condensed_python_version": "{{ cookiecutter.minimal_python_version.replace('.', '') }}",
+  "github_name": "{{ cookiecutter.organization }}",
+  "email": "hello@{{ cookiecutter.organization }}.com",
+  "version": "0.0.1",
+  "line_length": 88,
+  "create_example_template": ["cli", "none"],
+  "_copy_without_render": [
+    "poetry.lock"
+  ]
+}
