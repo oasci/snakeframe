@@ -4,7 +4,6 @@ import re
 import sys
 
 PROJECT_NAME = "{{ cookiecutter.project_name }}"
-PROJECT_VERSION = "{{ cookiecutter.version }}"
 LINE_LENGTH_PARAMETER = "{{ cookiecutter.line_length }}"
 
 
@@ -83,7 +82,6 @@ def validate_line_length(line_length: int) -> None:
 def main() -> None:
     try:
         validate_project_name(project_name=PROJECT_NAME)
-        validate_semver(version=PROJECT_VERSION)
         validate_line_length(line_length=int(LINE_LENGTH_PARAMETER))
     except ValueError as ex:
         print(ex)

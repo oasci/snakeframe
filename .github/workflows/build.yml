@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # Exclude the `PYTHON_VERSION` in `Makefile`. This is tested in codecov
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.9", "3.10", "3.11"]
 
     steps:
       - name: Checkout repo

@@ -25,11 +25,10 @@ poetry-dynamic-versioning = "^1.1.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.2"
-pytest-cov = "^4.1.0"
-coverage = "^7.3.1"
 pytest-html = "^4.0.1"
 colorama = "^0.4.6"
 coverage-badge = "^1.1.0"
+pytest-order = "^1.1.0"
 
 [tool.poetry.group.docs.dependencies]
 sphinx-multiversion = "^0.2.4"
@@ -171,21 +170,6 @@ addopts = [
     "--doctest-continue-on-failure",
 ]
 
-[tool.coverage.run]
-source = [
-    "tests",
-]
-
-[coverage.paths]
-source = "hooks"
-
-[coverage.run]
-branch = true
-
-[coverage.report]
-fail_under = 50
-show_missing = true
-
 [build-system]
 requires = [
     "poetry-core>=1.0.0",
@@ -203,7 +187,7 @@ cachy = "^0.3.0"
 certifi = "^2023.7.22"
 cffi = "^1.16.0"
 cfgv = "^3.3.1"
-charset-normalizer = "^3.3.1"
+charset-normalizer = "^3.3.2"
 cleo = "^2.1.0"
 click = "^8.1.7"
 click-default-group = "^1.2.4"

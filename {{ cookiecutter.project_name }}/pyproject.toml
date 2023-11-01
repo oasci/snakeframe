@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "{{ cookiecutter.project_name }}"
-version = "{{ cookiecutter.version }}"
+version = "0.0.0"
 description = "{{ cookiecutter.project_description }}"
 authors = ["{{ cookiecutter.organization }} <{{ cookiecutter.email }}>"]
 license = "{{ cookiecutter.license }}"
@@ -64,13 +64,13 @@ replace = "[Unreleased]\n\n## [{new_version}] - {now:%Y-%m-%d}"
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
-format-jinja = """
+{% raw %}format-jinja = """
     {%- if distance == 0 -%}
         {{ serialize_pep440(base) }}
     {%- else -%}
         {{ serialize_pep440(base, post=distance) }}
     {%- endif -%}
-"""
+"""{% endraw %}
 
 [tool.poetry-dynamic-versioning.substitution]
 patterns = [

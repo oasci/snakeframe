@@ -501,15 +501,15 @@ package:
   category: main
   optional: false
 - name: charset-normalizer
-  version: 3.3.1
+  version: 3.3.2
   manager: conda
   platform: linux-64
   dependencies:
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/charset-normalizer-3.3.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/charset-normalizer-3.3.2-pyhd8ed1ab_0.conda
   hash:
-    md5: 985378f74689fccce52f158027bd9acd
-    sha256: a31739c49c4b1c8e0cbdec965ba152683d36ce6e23bdaefcfee99937524dabd1
+    md5: 7f4a9e3fcff3f6356ae99244a014da6a
+    sha256: 20cae47d31fdd58d99c4d2e65fbdcefa0b0de0c84e455ba9d6356a4bdbc4b5b9
   category: main
   optional: false
 - name: click
@@ -1713,14 +1713,14 @@ package:
   category: main
   optional: false
 - name: llvm-openmp
-  version: 17.0.3
+  version: 17.0.4
   manager: conda
   platform: osx-64
   dependencies: {}
-  url: https://conda.anaconda.org/conda-forge/osx-64/llvm-openmp-17.0.3-hb6ac08f_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/llvm-openmp-17.0.4-hb6ac08f_0.conda
   hash:
-    md5: b70adc70bc7527a207c81c2e6b43532c
-    sha256: 5bded7aa593e4d5dea89fc19ef2aa48b531cbe455452877ef9bd5a698cf35e53
+    md5: 31391b68245bc68504169e98ffaf2c44
+    sha256: d49b6958d22075de5fb707fd5f593cfa4be059015db48b7f1cd5e47e7efde2ff
   category: main
   optional: false
 - name: python_abi
@@ -1962,15 +1962,15 @@ package:
   category: main
   optional: false
 - name: charset-normalizer
-  version: 3.3.1
+  version: 3.3.2
   manager: conda
   platform: osx-64
   dependencies:
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/charset-normalizer-3.3.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/charset-normalizer-3.3.2-pyhd8ed1ab_0.conda
   hash:
-    md5: 985378f74689fccce52f158027bd9acd
-    sha256: a31739c49c4b1c8e0cbdec965ba152683d36ce6e23bdaefcfee99937524dabd1
+    md5: 7f4a9e3fcff3f6356ae99244a014da6a
+    sha256: 20cae47d31fdd58d99c4d2e65fbdcefa0b0de0c84e455ba9d6356a4bdbc4b5b9
   category: main
   optional: false
 - name: click
@@ -3403,15 +3403,15 @@ package:
   category: main
   optional: false
 - name: charset-normalizer
-  version: 3.3.1
+  version: 3.3.2
   manager: conda
   platform: win-64
   dependencies:
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/charset-normalizer-3.3.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/charset-normalizer-3.3.2-pyhd8ed1ab_0.conda
   hash:
-    md5: 985378f74689fccce52f158027bd9acd
-    sha256: a31739c49c4b1c8e0cbdec965ba152683d36ce6e23bdaefcfee99937524dabd1
+    md5: 7f4a9e3fcff3f6356ae99244a014da6a
+    sha256: 20cae47d31fdd58d99c4d2e65fbdcefa0b0de0c84e455ba9d6356a4bdbc4b5b9
   category: main
   optional: false
 - name: colorama

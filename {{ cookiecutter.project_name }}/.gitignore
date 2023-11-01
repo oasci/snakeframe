@@ -626,3 +626,6 @@ docs/source/autoapi
 # psi4
 timer.dat
 psi.*.clean
+
+tests/tmp/*
+!tests/tmp/.gitkeep
