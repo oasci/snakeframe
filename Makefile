@@ -7,7 +7,7 @@ PACKAGE_PATH := $(REPO_PATH)/$(PACKAGE_NAME)
 TESTS_PATH := $(REPO_PATH)/tests
 CONDA_NAME := $(PACKAGE_NAME)-dev
 CONDA := conda run -n $(CONDA_NAME)
-
+DOCS_URL := https://snakeframe.oasci.org
 
 ###   ENVIRONMENT   ###
 
