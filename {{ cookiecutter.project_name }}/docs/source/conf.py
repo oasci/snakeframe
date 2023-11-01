@@ -44,7 +44,6 @@ extensions = [
     "sphinxemoji.sphinxemoji",
     "sphinx_autodoc_typehints",
     "sphinx_copybutton",
-    "sphinxext.rediraffe",
     "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
 ]
@@ -140,6 +139,5 @@ myst_enable_extensions = [
     "colon_fence",
     "smartquotes",
     "replacements",
-    # "linkify",
     "substitution",
 ]

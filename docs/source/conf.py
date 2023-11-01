@@ -39,7 +39,6 @@ extensions = [
     "sphinxemoji.sphinxemoji",
     "sphinx_autodoc_typehints",
     "sphinx_copybutton",
-    "sphinxext.rediraffe",
     "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
     "myst_nb",
