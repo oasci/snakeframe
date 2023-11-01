@@ -21,7 +21,7 @@
 
 ## TL;DR
 
-All you need is the latest version of [cookiecutter][cookiecutter].
+All you need is [cookiecutter][cookiecutter].
 
 ```bash
 cookiecutter gh:oasci/snakeframe
@@ -84,12 +84,10 @@ git push --follow-tags
 Code contained in this project is released under the [MIT License](https://spdx.org/licenses/MIT.html) as specified in [`LICENSE.md`][snakeframe-license].
 This license grants you the freedom to use, modify, and distribute it as long as you include the original copyright notice contained in [`LICENSE.md`][snakeframe-license] and the following disclaimer.
 
-> Portions of this code were incorporated and adapted with permission from [snakeframe](https://github.com/oasci/snakeframe) by OASCI licensed under the [MIT License](https://github.com/oasci/snakeframe/blob/main/LICENSE.md).
+> Portions of this code were incorporated and adapted with permission from [snakeframe](https://github.com/oasci/snakeframe) by OASCI under the [MIT License](https://github.com/oasci/snakeframe/blob/main/LICENSE.md).
 
-[snakeframe]: https://github.com/oasci/snakeframe
 [snakeframe-license]: https://github.com/oasci/snakeframe/blob/main/LICENSE.md
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
-[pyproject.toml]: https://github.com/oasci/snakeframe/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/pyproject.toml
 [poetry]: https://python-poetry.org/
 [conda]: https://conda.org/
 [conda-lock]: https://conda.github.io/conda-lock/
