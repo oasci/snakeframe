@@ -40,18 +40,18 @@ jobs:
           miniconda-version: "latest"
           auto-update-conda: true
           python-version: "3.11"
-  
+
       - name: Initialize conda environment
         run: make conda-setup
-  
+
       - name: Install conda packages
         run: make from-conda-lock
-  
+
       - name: Poetry install
         run: make install
 
       - name: Build documentation
-        run: make docs-multiversion
+        run: make docs-versioned
 
       - name: Setup Pages
         uses: actions/configure-pages@v3

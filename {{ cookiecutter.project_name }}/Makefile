@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
-PYTHON_VERSION := {{ cookiecutter.minimal_python_version }}
-PYTHON_VERSION_CONDENSED := {{ cookiecutter.condensed_python_version }}
+PYTHON_VERSION := {{ cookiecutter.dev_python_version }}
+PYTHON_VERSION_CONDENSED := {{ cookiecutter.condensed_dev_python_version }}
 PACKAGE_NAME := {{ cookiecutter.project_name }}
 REPO_PATH := $(shell git rev-parse --show-toplevel)
 PACKAGE_PATH := $(REPO_PATH)/$(PACKAGE_NAME)

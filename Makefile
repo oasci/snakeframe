@@ -1,7 +1,7 @@
 SHELL := /usr/bin/env bash
 PYTHON_VERSION := 3.11
 PYTHON_VERSION_CONDENSED := 311
-PACKAGE_NAME := hooks
+PACKAGE_NAME := snakeframe
 REPO_PATH := $(shell git rev-parse --show-toplevel)
 PACKAGE_PATH := $(REPO_PATH)/$(PACKAGE_NAME)
 TESTS_PATH := $(REPO_PATH)/tests

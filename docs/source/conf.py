@@ -13,10 +13,6 @@
 import os
 import sys
 
-# For our custom sphinx extensions
-sys.path.insert(0, os.path.abspath("./exts"))
-
-
 # -- Project information -----------------------------------------------------
 
 project = "snakeframe"
@@ -47,8 +43,6 @@ extensions = [
     "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
     "myst_nb",
-    "buttons",
-    "source_info",
 ]
 
 suppress_warnings = ["autosectionlabel.*"]
@@ -100,13 +94,13 @@ html_sidebars = {
 
 # Manually copy over files to the root. These can then be referenced outside of the
 # download directive.
-html_extra_path = []
+# html_extra_path = []
 
 
 # autoapi
 autoapi_type = "python"
 autoapi_generate_api_docs = True
-autoapi_dirs = ["../../hooks"]
+autoapi_dirs = ["../../snakeframe"]
 autoapi_add_toctree_entry = True
 autoapi_python_class_content = "both"
 autoapi_keep_files = False
@@ -142,6 +136,5 @@ myst_enable_extensions = [
     "colon_fence",
     "smartquotes",
     "replacements",
-    # "linkify",
     "substitution",
 ]

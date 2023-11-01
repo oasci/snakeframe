@@ -7,7 +7,6 @@ from shutil import move, rmtree
 PROJECT_DIRECTORY = Path.cwd().absolute()
 PROJECT_NAME = "{{ cookiecutter.project_name }}"
 PROJECT_MODULE = "{{ cookiecutter.project_name }}"
-CREATE_EXAMPLE_TEMPLATE = "{{ cookiecutter.create_example_template }}"
 
 # Values to generate correct license
 LICENSE = "{{ cookiecutter.license }}"
@@ -38,9 +37,7 @@ def generate_license(directory: Path, license_choice: str) -> None:
     rmtree(str(directory / "_licenses"))
 
 
-def remove_unused_files(
-    directory: Path, module_name: str, need_to_remove_cli: bool
-) -> None:
+def remove_unused_files(directory: Path, module_name: str) -> None:
     """Remove unused files.
 
     Args:
@@ -52,9 +49,6 @@ def remove_unused_files(
 
     def _cli_specific_files() -> list[Path]:
         return [directory / module_name / "__main__.py"]
-
-    if need_to_remove_cli:
-        files_to_delete.extend(_cli_specific_files())
 
     for path in files_to_delete:
         path.unlink()
@@ -86,8 +80,8 @@ def print_futher_instuctions(project_name: str, github: str) -> None:
     4) Run codestyle:
 
         $ make codestyle
-    
-    5) Check the `DOCS_URL` in the Makefile 
+
+    5) Check the `DOCS_URL` in the Makefile
 
     6) Upload initial code to GitHub:
 
@@ -105,7 +99,6 @@ def main() -> None:
     remove_unused_files(
         directory=PROJECT_DIRECTORY,
         module_name=PROJECT_MODULE,
-        need_to_remove_cli=CREATE_EXAMPLE_TEMPLATE != "cli",
     )
     print_futher_instuctions(project_name=PROJECT_NAME, github=GITHUB_USER)
 

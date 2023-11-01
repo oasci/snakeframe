@@ -6,18 +6,18 @@ labels: enhancement
 assignees:
 ---
 
-## 🚀 Feature Request
+## Feature Request
 
 <!-- A clear and concise description of the feature proposal. -->
 
-## 🔈 Motivation
+## Motivation
 
 <!-- Please describe the motivation for this proposal. -->
 
-## 🛰 Alternatives
+## Alternatives
 
 <!-- A clear and concise description of any alternative solutions or features you've considered. -->
 
-## 📎 Additional context
+## Additional context
 
 <!-- Add any other context or screenshots about the feature request here. -->

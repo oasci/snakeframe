@@ -17,27 +17,24 @@ jobs:
       steps:
         - name: Checkout repo
           uses: actions/checkout@v4
-  
+
         - name: Install miniconda
           uses: conda-incubator/setup-miniconda@v2
           with:
             miniconda-version: "latest"
             auto-update-conda: true
-            python-version: {% endraw %}"{{ cookiecutter.minimal_python_version }}"{% raw %}
-  
+            python-version: {% endraw %}"{{ cookiecutter.dev_python_version }}"{% raw %}
+
         - name: Initialize conda environment
           run: make conda-setup
-  
+
         - name: Install conda packages
           run: make from-conda-lock
-  
+
         - name: Poetry install
           run: make install
 
         - name: Style checks
           run: make check-codestyle
-        
-        - name: Safety checks
-          run: make check-safety
 
 {% endraw %}

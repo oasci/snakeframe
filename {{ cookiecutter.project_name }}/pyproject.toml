@@ -10,7 +10,7 @@ homepage = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.pr
 
 
 [tool.poetry.dependencies]
-python = "^{{ cookiecutter.minimal_python_version }}"
+python = "^{{ cookiecutter.min_python_version }}"
 cookiecutter = "^2.3.0"
 
 
@@ -22,8 +22,8 @@ pylint = "^2.17.5"
 bandit = "^1.7.5"
 mypy = "^1.5.1"
 mypy-extensions = "^1.0.0"
-pyupgrade = "^3.10.1"
-safety = "^2.3.5"
+bump-my-version = "^0.11.0"
+poetry-dynamic-versioning = "^1.1.0"
 
 
 [tool.poetry.group.test.dependencies]
@@ -50,10 +50,46 @@ sphinxext-rediraffe = "^0.2.7"
 sphinx-togglebutton = "^0.3.2"
 sphinxcontrib-bibtex = "^2.6.1"
 
+[tool.bumpversion]
+current_version = "0.1.1"
+tag = true
+commit = true
+
+[[tool.bumpversion.files]]
+filename = "CHANGELOG.md"
+no_regex = false
+search = "\\[Unreleased\\]"
+replace = "[Unreleased]\n\n## [{new_version}] - {now:%Y-%m-%d}"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+format-jinja = """
+    {%- if distance == 0 -%}
+        {{ serialize_pep440(base) }}
+    {%- else -%}
+        {{ serialize_pep440(base, post=distance) }}
+    {%- endif -%}
+"""
+
+[tool.poetry-dynamic-versioning.substitution]
+patterns = [
+    "(^__version__\\s*(?::.*?)?=\\s*['\"])[^'\"]*(['\"])",
+]
+folders = [
+  { path = "conda_poetry_liaison" }
+]
+
+[tool.poetry.group.docs.dependencies.myst-nb]
+git = "https://github.com/executablebooks/MyST-NB"
+rev = "35ebd5429c1c315d2564af261b4df836651962eb"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = [
+    "poetry-core>=1.0.0",
+    "poetry-dynamic-versioning>=1.0.0,<2.0.0"
+]
+build-backend = "poetry_dynamic_versioning.backend"
 
 
 [tool.pylint.messages_control]
@@ -69,7 +105,7 @@ ignore = ["CVS", "_version.py", "conf.py"]
 
 [tool.black]
 # https://github.com/psf/black
-target-version = ["py{{ cookiecutter.minimal_python_version.replace('.', '') }}"]
+target-version = ["py{{ cookiecutter.min_python_version.replace('.', '') }}"]
 line-length = {{ cookiecutter.line_length }}
 color = true
 
@@ -92,7 +128,7 @@ exclude = '''
 
 [tool.isort]
 # https://github.com/timothycrosley/isort/
-py_version = {{ cookiecutter.minimal_python_version.replace('.', '') }}
+py_version = {{ cookiecutter.min_python_version.replace('.', '') }}
 line_length = {{ cookiecutter.line_length }}
 
 known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
@@ -106,7 +142,7 @@ color_output = true
 
 [tool.mypy]
 # https://mypy.readthedocs.io/en/latest/config_file.html#using-a-pyproject-toml-file
-python_version = {{ cookiecutter.minimal_python_version }}
+python_version = {{ cookiecutter.min_python_version }}
 pretty = true
 show_traceback = true
 color_output = true
@@ -134,7 +170,7 @@ warn_unused_ignores = true
 [tool.pytest.ini_options]
 # https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
 # Directories that are not visited by pytest collector:
-norecursedirs =["{{ cookiecutter.project_name }}", "hooks", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
+norecursedirs =["{{ cookiecutter.project_name }}", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
 doctest_optionflags = ["NUMBER", "NORMALIZE_WHITESPACE", "IGNORE_EXCEPTION_DETAIL"]
 
 # Extra options:
@@ -151,7 +187,7 @@ source = ["tests"]
 
 
 [coverage.paths]
-source = "hooks"
+source = "{{ cookiecutter.project_name }}"
 
 
 [coverage.run]

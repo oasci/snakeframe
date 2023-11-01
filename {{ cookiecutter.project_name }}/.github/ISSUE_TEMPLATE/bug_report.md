@@ -6,21 +6,21 @@ labels: bug
 assignees:
 ---
 
-## 🐛 Bug Report
+## Bug Report
 
 <!-- A clear and concise description of what the bug is. -->
 
-## 🔬 How To Reproduce
+## How To Reproduce
 
 Steps to reproduce the behavior:
 
 1. ...
 
-### 🧪 Code sample
+### Code sample
 
 <!-- If applicable, attach a minimal code sample to reproduce the decried issue. -->
 
-### ⛱️ Environment
+### Environment
 
 - OS: [e.g. Linux / Windows / macOS]
 - Python version, get it with:
@@ -29,14 +29,14 @@ Steps to reproduce the behavior:
 python --version
 ```
 
-### 📷 Screenshots
+### Screenshots
 
-<!-- If applicable, add screenshots to help explain your problem. Otherwise, remove this section. -->
+<!-- If applicable, add screenshots to help explain your problem. -->
 
-## 📈 Expected behavior
+## Expected behavior
 
 <!-- A clear and concise description of what you expected to happen. -->
 
-## 📎 Additional context
+## Additional context
 
 <!-- Add any other context about the problem here. -->

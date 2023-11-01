@@ -6,11 +6,11 @@ labels: bug
 assignees:
 ---
 
-## 🐛 Bug Report
+## Bug Report
 
 <!-- A clear and concise description of what the bug is. -->
 
-## 🔬 How To Reproduce
+## How To Reproduce
 
 Steps to reproduce the behavior:
 
@@ -33,10 +33,10 @@ python --version
 
 <!-- If applicable, add screenshots to help explain your problem. -->
 
-## 📈 Expected behavior
+## Expected behavior
 
 <!-- A clear and concise description of what you expected to happen. -->
 
-## 📎 Additional context
+## Additional context
 
 <!-- Add any other context about the problem here. -->
