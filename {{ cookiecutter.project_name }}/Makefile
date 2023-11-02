@@ -13,14 +13,26 @@ DOCS_URL := https://{{ cookiecutter.github_name }}.github.io/{{ cookiecutter.pro
 
 ###   ENVIRONMENT   ###
 
-.PHONY: conda-setup
-conda-setup:
+.PHONY: conda-create
+conda-create:
 	- conda deactivate
 	conda remove -y -n $(CONDA_NAME) --all
-	conda create -y -n $(CONDA_NAME) python=$(PYTHON_VERSION)
-	conda install -y conda-lock -n $(CONDA_NAME)
-	conda install -y -c conda-forge poetry pre-commit tomli tomli-w -n $(CONDA_NAME)
+	conda create -y -n $(CONDA_NAME)
+	$(CONDA) conda install -y python=$(PYTHON_VERSION)
+	$(CONDA) conda install -y conda-lock
+
+# Default packages that we always need.
+.PHONY: conda-setup
+conda-setup:
+	$(CONDA) conda install -y -c conda-forge poetry
+	$(CONDA) conda install -y -c conda-forge pre-commit
+	$(CONDA) conda install -y -c conda-forge tomli tomli-w
 	$(CONDA) pip install conda_poetry_liaison
+
+# Conda-only packages specific to this project.
+.PHONY: conda-dependencies
+conda-dependencies:
+	echo "No conda-only packages are required."
 
 .PHONY: write-conda-lock
 write-conda-lock:
@@ -53,7 +65,7 @@ install:
 	- $(CONDA) poetry run mypy --install-types --non-interactive --explicit-package-bases $(PACKAGE_NAME)
 
 .PHONY: refresh
-refresh: conda-setup from-conda-lock pre-commit-install install
+refresh: conda-create from-conda-lock pre-commit-install install
 
 
 
