@@ -105,7 +105,7 @@ ignore = ["CVS", "_version.py", "conf.py"]
 
 [tool.black]
 # https://github.com/psf/black
-target-version = ["py{{ cookiecutter.min_python_version.replace('.', '') }}"]
+target-version = ["py{{ cookiecutter.condensed_dev_python_version }}"]
 line-length = {{ cookiecutter.line_length }}
 color = true
 
@@ -128,7 +128,7 @@ exclude = '''
 
 [tool.isort]
 # https://github.com/timothycrosley/isort/
-py_version = {{ cookiecutter.min_python_version.replace('.', '') }}
+py_version = {{ cookiecutter.condensed_dev_python_version }}
 line_length = {{ cookiecutter.line_length }}
 
 known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
@@ -142,7 +142,7 @@ color_output = true
 
 [tool.mypy]
 # https://mypy.readthedocs.io/en/latest/config_file.html#using-a-pyproject-toml-file
-python_version = {{ cookiecutter.min_python_version }}
+python_version = {{ cookiecutter.condensed_dev_python_version }}
 pretty = true
 show_traceback = true
 color_output = true
