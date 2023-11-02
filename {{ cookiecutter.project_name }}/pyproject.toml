@@ -51,7 +51,7 @@ sphinx-togglebutton = "^0.3.2"
 sphinxcontrib-bibtex = "^2.6.1"
 
 [tool.bumpversion]
-current_version = "0.1.1"
+current_version = "0.0.0"
 tag = true
 commit = true
 
