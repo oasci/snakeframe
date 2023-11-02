@@ -1,5 +1,5 @@
 default_language_version:
-  python: python{{ cookiecutter.min_python_version }}
+  python: python{{ cookiecutter.dev_python_version }}
 
 default_stages: [commit, push]
 
