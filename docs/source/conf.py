@@ -72,7 +72,7 @@ html_theme = "furo"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+# html_static_path = ["_static"]
 
 # Including sphinx multiversion
 templates_path = [
@@ -113,17 +113,6 @@ html_theme_options = {
     "source_repository": "https://github.com/oasci/snakeframe",
     "source_branch": "main",
     "source_directory": "docs/source/",
-    "top_of_page_button": ["edit", "save", "launch"],
-    "path_to_docs": "docs/source/",
-    "repository_url": "https://github.com/oasci/snakeframe",
-    "repository_branch": "main",
-    "launch_buttons": {
-        "binderhub_url": "https://mybinder.org",
-        "colab_url": "https://colab.research.google.com/",
-        "deepnote_url": "https://deepnote.com/",
-        "notebook_interface": "jupyterlab",
-        "thebe": False,
-    },
 }
 
 myst_enable_extensions = [
