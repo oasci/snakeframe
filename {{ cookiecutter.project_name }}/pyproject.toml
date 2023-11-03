@@ -11,7 +11,6 @@ homepage = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.pr
 
 [tool.poetry.dependencies]
 python = "^{{ cookiecutter.min_python_version }}"
-cookiecutter = "^2.3.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -19,7 +18,6 @@ black = "^23.9.0"
 isort = "^5.12.0"
 pre-commit = "^3.4.0"
 pylint = "^2.17.5"
-bandit = "^1.7.5"
 mypy = "^1.5.1"
 mypy-extensions = "^1.0.0"
 bump-my-version = "^0.11.0"
@@ -32,7 +30,6 @@ pytest-cov = "^4.1.0"
 coverage = "^7.3.1"
 pytest-html = "^4.0.1"
 colorama = "^0.4.6"
-coverage-badge = "^1.1.0"
 
 
 [tool.poetry.group.docs.dependencies]
@@ -82,7 +79,7 @@ folders = [
 
 [tool.poetry.group.docs.dependencies.myst-nb]
 git = "https://github.com/executablebooks/MyST-NB"
-rev = "35ebd5429c1c315d2564af261b4df836651962eb"
+rev = "8428815cda8af7937993241eaa6fa76eb1635497"
 
 [build-system]
 requires = [
