@@ -23,8 +23,6 @@ TODO: Add in outline
 
 ## Deploying
 
-A note to maintainers.
-
 We use [bump-my-version](https://github.com/callowayproject/bump-my-version) to release a new version.
 This will create a git tag that is used by [poetry-dynamic-version](https://github.com/mtkennerly/poetry-dynamic-versioning) to generate version strings and update `CHANGELOG.md`.
 
