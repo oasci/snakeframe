@@ -52,6 +52,13 @@ numpy = "^1.26.0"
 git = "https://github.com/executablebooks/MyST-NB"
 rev = "8428815cda8af7937993241eaa6fa76eb1635497"
 
+[build-system]
+requires = [
+    "poetry-core>=1.0.0",
+    "poetry-dynamic-versioning>=1.0.0,<2.0.0",
+]
+build-backend = "poetry_dynamic_versioning.backend"
+
 [tool.bumpversion]
 current_version = "0.1.1"
 tag = true
@@ -66,15 +73,7 @@ replace = "[Unreleased]\n\n## [{new_version}] - {now:%Y-%m-%d}"
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
-format-jinja = "    {%- if distance == 0 -%}\n        {{ serialize_pep440(base) }}\n    {%- else -%}\n        {{ serialize_pep440(base, post=distance) }}\n    {%- endif -%}\n"
-
-[tool.poetry-dynamic-versioning.substitution]
-patterns = [
-    "(^__version__\\s*(?::.*?)?=\\s*['\"])[^'\"]*(['\"])",
-]
-folders = [
-    { path = "conda_poetry_liaison" },
-]
+format-jinja = "{%- if distance == 0 -%}{{ serialize_pep440(base) }}{%- else -%}{{ serialize_pep440(base, post=distance) }}{%- endif -%}"
 
 [tool.pylint.messages_control]
 good-names = [
@@ -169,13 +168,6 @@ addopts = [
     "--doctest-modules",
     "--doctest-continue-on-failure",
 ]
-
-[build-system]
-requires = [
-    "poetry-core>=1.0.0",
-    "poetry-dynamic-versioning>=1.0.0,<2.0.0",
-]
-build-backend = "poetry_dynamic_versioning.backend"
 
 ["tool.poetry.group.conda.dependencies"]
 appdirs = "^1.4.4"
