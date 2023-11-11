@@ -13,6 +13,9 @@ DOCS_URL := https://{{ cookiecutter.github_name }}.github.io/{{ cookiecutter.pro
 
 ###   ENVIRONMENT   ###
 
+# See https://github.com/pypa/pip/issues/7883#issuecomment-643319919
+export PYTHON_KEYRING_BACKEND := keyring.backends.null.Keyring
+
 .PHONY: conda-create
 conda-create:
 	- conda deactivate
