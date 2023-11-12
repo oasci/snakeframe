@@ -1,14 +1,12 @@
 SHELL := /usr/bin/env bash
 PYTHON_VERSION := {{ cookiecutter.dev_python_version }}
-PYTHON_VERSION_CONDENSED := {{ cookiecutter.condensed_dev_python_version }}
+PYTHON_VERSION_CONDENSED := {{ cookiecutter.dev_python_version.replace('.', '') }}
 PACKAGE_NAME := {{ cookiecutter.project_name }}
 REPO_PATH := $(shell git rev-parse --show-toplevel)
 PACKAGE_PATH := $(REPO_PATH)/$(PACKAGE_NAME)
 TESTS_PATH := $(REPO_PATH)/tests
 CONDA_NAME := $(PACKAGE_NAME)-dev
 CONDA := conda run -n $(CONDA_NAME)
-DOCS_URL := https://{{ cookiecutter.github_name }}.github.io/{{ cookiecutter.project_name }}
-
 
 
 ###   ENVIRONMENT   ###
@@ -69,7 +67,7 @@ install:
 .PHONY: refresh
 refresh: conda-create from-conda-lock pre-commit-install install
 
-.PHONY: refresh-lock
+.PHONY: refresh-locks
 refresh-lock: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
 
 
@@ -150,23 +148,24 @@ build:
 
 ###   DOCS   ###
 
+
 .PHONY: docs
 docs:
-	rm -rf ./docs/html/
-	$(CONDA) sphinx-build -nT ./docs/source/ ./docs/html/
-	touch ./docs/html/.nojekyll
+	rm -rf public/
+	$(CONDA) sphinx-build -nT docs/ public/
+	touch public/.nojekyll
 
 .PHONY: docs-versioned
 docs-versioned:
-	rm -rf ./docs/html/
-	$(CONDA) sphinx-multiversion -nT ./docs/source/ ./docs/html/
-	touch ./docs/html/.nojekyll
+	rm -rf public/
+	$(CONDA) sphinx-multiversion -nT docs/ public/
+	touch public/.nojekyll
 
 	# Create html redirect to main
-	echo "<head>" > ./docs/html/index.html
-	echo "  <meta http-equiv='refresh' content='0; URL=$(DOCS_URL)/main/index.html'>" >> ./docs/html/index.html
-	echo "</head>" >> ./docs/html/index.html
+	echo "<head>" > public/index.html
+	echo "  <meta http-equiv='refresh' content='0; URL=$(DOCS_URL)/main/index.html'>" >> public/index.html
+	echo "</head>" >> public/index.html
 
 .PHONY: open-docs
 open-docs:
-	xdg-open ./docs/html/index.html 2>/dev/null
+	xdg-open public/index.html 2>/dev/null

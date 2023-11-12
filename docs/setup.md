@@ -32,7 +32,7 @@ Template generator will ask you to fill some variables.
 > Python version used for local development.
 > It is used for specifying the conda environment.
 
-`github_name` (**Default:** based on the `organization`)
+`user_name` (**Default:** based on the `organization`)
 
 > GitHub username for hosting.
 > Also used to set up `README.md`, `pyproject.toml` and template files for GitHub.

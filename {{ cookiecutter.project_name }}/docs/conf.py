@@ -17,8 +17,8 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = "{{ cookiecutter.project_name }}"
-copyright = "2023, {{ cookiecutter.github_name }}"
-author = "{{ cookiecutter.github_name }}"
+copyright = "2023, {{ cookiecutter.user_name }}"
+author = "{{ cookiecutter.user_name }}"
 html_title = "{{ cookiecutter.project_name }}"
 
 
@@ -111,7 +111,7 @@ bibtex_bibfiles = ["refs.bib"]
 
 # Header buttons
 html_theme_options = {
-    "source_repository": "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}",
+    "source_repository": "https://github.com/{{ cookiecutter.user_name }}/{{ cookiecutter.project_name }}",
     "source_branch": "main",
     "source_directory": "docs/source/",
 }

@@ -33,32 +33,32 @@ In this [cookiecutter 🍪][cookiecutter] template we combine state-of-the-art l
 
 ### Development
 
-- Supports `Python 3.9` and higher.
-- Seamless [`conda`][conda]+[`poetry`][poetry] dependencies manager with [conda][conda-lock] and [poetry][poetry-lock] files.
-- Automatic codestyle with [`black`][black], [`isort`][isort], and [`pylint`][pylint].
-- [`pre-commit`][pre-commit] hooks with code-formatting.
-- Type checks with [`mypy`][mypy].
-- Testing with [`pytest`][pytest].
-- Ready-to-use [`.editorconfig`][.editorconfig] and [`.gitignore`][.gitignore].
+-   Supports `Python 3.9` and higher.
+-   Seamless [`conda`][conda]+[`poetry`][poetry] dependencies manager with [conda][conda-lock] and [poetry][poetry-lock] files.
+-   Automatic codestyle with [`black`][black], [`isort`][isort], and [`pylint`][pylint].
+-   [`pre-commit`][pre-commit] hooks with code-formatting.
+-   Type checks with [`mypy`][mypy].
+-   Testing with [`pytest`][pytest].
+-   Ready-to-use [`.editorconfig`][.editorconfig] and [`.gitignore`][.gitignore].
 
 ### Deployment
 
-- `GitHub` integration: issue and pull request templates.
-- `Github Actions` with predefined [build workflow][build.yml] as the default CI/CD.
-- Everything is already set up for code style checks, code formatting, testing, linting, etc. with [`Makefile`][makefile].
-- Always up-to-date dependencies with [`@dependabot`][dependabot].
-  You only need to [enable it][dependabot-configure].
-- Automatic release notes with [`Release Drafter`][release drafter].
-  You may see the list of labels in [`release-drafter.yml`][release-drafter.yml].
-  Works perfectly with [Semantic Versions][semver] specification.
+-   `GitHub` integration: issue and pull request templates.
+-   `Github Actions` with predefined [build workflow][build.yml] as the default CI/CD.
+-   Everything is already set up for code style checks, code formatting, testing, linting, etc. with [`Makefile`][makefile].
+-   Always up-to-date dependencies with [`@dependabot`][dependabot].
+    You only need to [enable it][dependabot-configure].
+-   Automatic release notes with [`Release Drafter`][release drafter].
+    You may see the list of labels in [`release-drafter.yml`][release-drafter.yml].
+    Works perfectly with [Semantic Versions][semver] specification.
 
 ### Community
 
-- [Pull Request][pr-template] and several [Issue][issue-template] templates.
-- Files such as: `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and `SECURITY.md` are generated automatically.
-- [`Stale action`][stale action] that closes abandoned issues after a period of inactivity.
-- [`Sphinx`][sphinx] documentation automatically built with [deploy-docs.yml][docs.yml].
-  You just need to activate pages and set source to `GitHub Actions`.
+-   [Pull Request][pr-template] and several [Issue][issue-template] templates.
+-   Files such as: `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and `SECURITY.md` are generated automatically.
+-   [`Stale action`][stale action] that closes abandoned issues after a period of inactivity.
+-   [`Sphinx`][sphinx] documentation automatically built with [deploy-docs.yml][docs.yml].
+    You just need to activate pages and set source to `GitHub Actions`.
 
 ## Deploying
 
