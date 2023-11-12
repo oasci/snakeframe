@@ -68,7 +68,7 @@ install:
 refresh: conda-create from-conda-lock pre-commit-install install
 
 .PHONY: refresh-locks
-refresh-lock: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
+refresh-locks: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
 
 
 
