@@ -64,8 +64,8 @@ install:
 	- mkdir .mypy_cache
 	- $(CONDA) poetry run mypy --install-types --non-interactive --explicit-package-bases $(PACKAGE_NAME)
 
-.PHONY: refresh
-refresh: conda-create from-conda-lock pre-commit-install install
+.PHONY: environment
+environment: conda-create from-conda-lock pre-commit-install install
 
 .PHONY: refresh-locks
 refresh-locks: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
@@ -92,6 +92,10 @@ formatting:
 .PHONY: test
 test:
 	$(CONDA) pytest -c pyproject.toml --cov=$(PACKAGE_NAME) --cov-report=xml --junit-xml=report.xml $(TESTS_PATH)
+
+.PHONY: coverage
+coverage:
+	$(CONDA) coverage report
 
 .PHONY: check-codestyle
 check-codestyle:
@@ -150,21 +154,21 @@ build:
 
 .PHONY: docs
 docs:
-	rm -rf ./docs/html/
-	$(CONDA) sphinx-build -nT ./docs/source/ ./docs/html/
-	touch ./docs/html/.nojekyll
+	rm -rf public/
+	$(CONDA) sphinx-build -nT docs/ public/
+	touch public/.nojekyll
 
 .PHONY: docs-versioned
 docs-versioned:
-	rm -rf ./docs/html/
-	$(CONDA) sphinx-multiversion -nT ./docs/source/ ./docs/html/
-	touch ./docs/html/.nojekyll
+	rm -rf public/
+	$(CONDA) sphinx-multiversion -nT docs/ public/
+	touch public/.nojekyll
 
 	# Create html redirect to main
-	echo "<head>" > ./docs/html/index.html
-	echo "  <meta http-equiv='refresh' content='0; URL=$(DOCS_URL)/main/index.html'>" >> ./docs/html/index.html
-	echo "</head>" >> ./docs/html/index.html
+	echo "<head>" > public/index.html
+	echo "  <meta http-equiv='refresh' content='0; URL=$(DOCS_URL)/main/index.html'>" >> public/index.html
+	echo "</head>" >> public/index.html
 
 .PHONY: open-docs
 open-docs:
-	xdg-open ./docs/html/index.html 2>/dev/null
+	xdg-open public/index.html 2>/dev/null

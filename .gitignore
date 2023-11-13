@@ -617,11 +617,8 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/osx,python,pycharm,windows,visualstudio,visualstudiocode
 
 # Doc builds
-docs/source/_build
-docs/html
-docs/jupyter_execute
-docs/source/doc
-docs/source/autoapi
+public/
+jupyter_execute
 
 # psi4
 timer.dat

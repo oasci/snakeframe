@@ -1,0 +1,31 @@
+default:
+  image: continuumio/miniconda3
+  before_script:
+    - apt-get update && apt-get install build-essential -y
+    - make environment
+
+pages:
+  stage: deploy
+  script:
+  - make docs
+  artifacts:
+    paths:
+    - public/
+  rules:
+  - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH"
+
+
+tests:
+  stage: test
+  script:
+    - make test
+    - make coverage  # for displaying coverage in job logs
+  coverage: '/^TOTAL.+?(\d+\%)$/'
+  artifacts:
+    when: always
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+      junit: report.xml
+  interruptible: true

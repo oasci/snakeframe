@@ -52,13 +52,6 @@ numpy = "^1.26.0"
 git = "https://github.com/executablebooks/MyST-NB"
 rev = "8428815cda8af7937993241eaa6fa76eb1635497"
 
-[build-system]
-requires = [
-    "poetry-core>=1.0.0",
-    "poetry-dynamic-versioning>=1.0.0,<2.0.0",
-]
-build-backend = "poetry_dynamic_versioning.backend"
-
 [tool.bumpversion]
 current_version = "0.1.1"
 tag = true
@@ -169,6 +162,13 @@ addopts = [
     "--doctest-continue-on-failure",
 ]
 
+[build-system]
+requires = [
+    "poetry-core>=1.0.0",
+    "poetry-dynamic-versioning>=1.0.0,<2.0.0",
+]
+build-backend = "poetry_dynamic_versioning.backend"
+
 ["tool.poetry.group.conda.dependencies"]
 appdirs = "^1.4.4"
 Brotli = "^1.1.0"
@@ -221,8 +221,8 @@ poetry-plugin-export = "^1.6.0"
 pre-commit = "^3.5.0"
 ptyprocess = "^0.7.0"
 pycparser = "^2.21"
-pydantic = "^2.0.3"
-pydantic_core = "^2.3.0"
+pydantic = "^2.4.2"
+pydantic_core = "^2.10.1"
 pylev = "^1.4.0"
 pyproject_hooks = "^1.0.0"
 PySocks = "^1.7.1"
@@ -241,7 +241,7 @@ tomli = "^2.0.1"
 tomli_w = "^1.0.0"
 tomlkit = "^0.12.2"
 toolz = "^0.12.0"
-trove-classifiers = "^2023.10.18"
+trove-classifiers = "^2023.11.9"
 typing_extensions = "^4.8.0"
 ukkonen = "^1.0.1"
 urllib3 = "^1.26.18"

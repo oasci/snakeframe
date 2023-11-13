@@ -99,7 +99,7 @@ html_sidebars = {
 # autoapi
 autoapi_type = "python"
 autoapi_generate_api_docs = True
-autoapi_dirs = ["../../snakeframe"]
+autoapi_dirs = ["../snakeframe"]
 autoapi_add_toctree_entry = True
 autoapi_python_class_content = "both"
 autoapi_keep_files = False

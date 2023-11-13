@@ -24,7 +24,7 @@
 All you need is [cookiecutter][cookiecutter].
 
 ```bash
-cookiecutter gh:oasci/snakeframe
+cookiecutter gl:oasci/snakeframe
 ```
 
 ## Features
