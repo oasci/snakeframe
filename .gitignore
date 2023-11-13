@@ -619,6 +619,7 @@ MigrationBackup/
 # Doc builds
 public/
 jupyter_execute
+report.xml
 
 # psi4
 timer.dat
