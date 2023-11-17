@@ -13,13 +13,11 @@
 version: 1
 metadata:
   content_hash:
-    linux-64: b39fcb1182004d05af1f4084de6ed7edf7a66e3798b8e43c7175a5dcb2b25b20
-    osx-64: 1b35287cc5e6af0fdc637874fe946889ca811ebcd520d9dc48a3794e4384ff30
-    win-64: db1c82ff11aa90796627fc245965af9728fabdfb2df37c4cdd59f1a5f9251535
+    linux-64: 28812284faae77011adef0e5fe3056bfaf333460f7914074dae46069b79c3337
+    osx-64: 815a9b0a3fedbd76746175334976ff7672b096243e3c333cfc6a8707cef071eb
+    win-64: d4e9e6e97683976170440158fa9e0bbf52d6a0ed3d9ee4e29ca498cbd5c9319b
   channels:
   - url: conda-forge
-    used_env_vars: []
-  - url: defaults
     used_env_vars: []
   platforms:
   - linux-64
@@ -328,17 +326,17 @@ package:
   category: main
   optional: false
 - name: pcre2
-  version: '10.40'
+  version: '10.42'
   manager: conda
   platform: linux-64
   dependencies:
     bzip2: '>=1.0.8,<2.0a0'
     libgcc-ng: '>=12'
-    libzlib: '>=1.2.12,<1.3.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/pcre2-10.40-hc3806b6_0.tar.bz2
+    libzlib: '>=1.2.13,<1.3.0a0'
+  url: https://conda.anaconda.org/conda-forge/linux-64/pcre2-10.42-hcad00b1_0.conda
   hash:
-    md5: 69e2c796349cd9b273890bee0febfe1b
-    sha256: 7a29ec847556eed4faa1646010baae371ced69059a4ade43851367a076d6108a
+    md5: 679c8961826aa4b50653bce17ee52abe
+    sha256: 3ca54ff0abcda964af7d4724d389ae20d931159ae1881cfe57ad4b0ab9e6a380
   category: main
   optional: false
 - name: readline
@@ -378,11 +376,11 @@ package:
     libiconv: '>=1.17,<2.0a0'
     libstdcxx-ng: '>=12'
     libzlib: '>=1.2.13,<1.3.0a0'
-    pcre2: '>=10.40,<10.41.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libglib-2.78.1-hebfc3b9_0.conda
+    pcre2: '>=10.42,<10.43.0a0'
+  url: https://conda.anaconda.org/conda-forge/linux-64/libglib-2.78.1-h783c2da_1.conda
   hash:
-    md5: ddd09e8904fde46b85f41896621803e6
-    sha256: 44c5f58593b074886436db7d13fdfcba2fe3731867ea52237f049b8400341a2b
+    md5: 70052d6c1e84643e30ffefb21ab6950f
+    sha256: 4e6fa28002f834cfc30a64792e95c1701d835cc3d3a4bb18d6e8d16bb8aba05b
   category: main
   optional: false
 - name: libopenblas
@@ -750,15 +748,15 @@ package:
   category: main
   optional: false
 - name: python-fastjsonschema
-  version: 2.18.1
+  version: 2.19.0
   manager: conda
   platform: linux-64
   dependencies:
     python: '>=3.3'
-  url: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.18.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.19.0-pyhd8ed1ab_0.conda
   hash:
-    md5: 305141cff54af2f90e089d868fffce28
-    sha256: 3fb1af1ac7525072c46e111bc4e96ddf971f792ab049ca3aa25dbebbaffb6f7d
+    md5: e4dbdb3585c0266b4710467fe7b75cf4
+    sha256: fdfe3f387c5ebde803605e1e90871c424519d2bfe2eb3bf9caad1c5a07f4c462
   category: main
   optional: false
 - name: python-installer
@@ -875,15 +873,15 @@ package:
   category: main
   optional: false
 - name: tomlkit
-  version: 0.12.2
+  version: 0.12.3
   manager: conda
   platform: linux-64
   dependencies:
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/tomlkit-0.12.2-pyha770c72_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/tomlkit-0.12.3-pyha770c72_0.conda
   hash:
-    md5: 495ddad84b81dde4ee1138dd59ef5805
-    sha256: 2db2564e0332f051f46670fb7c430b53d3d596f102f7d9994e84cf8afae2a12f
+    md5: 074d0ce7a6261ab8b497c3518796ef3e
+    sha256: 53cc436ab92d38683df1320e4468a8b978428e800195bf1c8c2460e90b0bc117
   category: main
   optional: false
 - name: toolz
@@ -899,15 +897,15 @@ package:
   category: main
   optional: false
 - name: trove-classifiers
-  version: 2023.11.9
+  version: 2023.11.14
   manager: conda
   platform: linux-64
   dependencies:
-    python: '>=3.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/trove-classifiers-2023.11.9-pyhd8ed1ab_0.conda
+    python: '>=3.7'
+  url: https://conda.anaconda.org/conda-forge/noarch/trove-classifiers-2023.11.14-pyhd8ed1ab_0.conda
   hash:
-    md5: b9969f8fbfe372b437f794598c235601
-    sha256: 1a4906ba734fda0ea82bab2da20369172f2054d0c84fe51a3f45e44ca1adc7bb
+    md5: dee8232c4bb962881f8e67588cd31670
+    sha256: 0e1e6f6377f454a7f4c50fa3f650a2114175861905e8d0dc759aeac2724730b0
   category: main
   optional: false
 - name: typing_extensions
@@ -1289,7 +1287,7 @@ package:
   category: main
   optional: false
 - name: pydantic-core
-  version: 2.10.1
+  version: 2.14.3
   manager: conda
   platform: linux-64
   dependencies:
@@ -1297,10 +1295,10 @@ package:
     python: '>=3.11,<3.12.0a0'
     python_abi: 3.11.*
     typing-extensions: '>=4.6.0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/pydantic-core-2.10.1-py311h46250e7_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/pydantic-core-2.14.3-py311h46250e7_0.conda
   hash:
-    md5: 36ee4237f8f9f97adb057974e8fee4c5
-    sha256: 871ec291dd2be9a38768c63ac94f3f959a9084aa75dd09b5657fc1c6a7a73e2f
+    md5: 792d87c4806a019b7afc94bb005cdf7d
+    sha256: 74c2366c11c101394a6c06230b21f2721002d415b1a24957046e12636a8b1760
   category: main
   optional: false
 - name: python-build
@@ -1396,18 +1394,18 @@ package:
   category: main
   optional: false
 - name: pydantic
-  version: 2.4.2
+  version: 2.5.1
   manager: conda
   platform: linux-64
   dependencies:
     annotated-types: '>=0.4.0'
-    pydantic-core: 2.10.1
+    pydantic-core: 2.14.3
     python: '>=3.7'
     typing-extensions: '>=4.6.1'
-  url: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.4.2-pyhd8ed1ab_1.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.5.1-pyhd8ed1ab_0.conda
   hash:
-    md5: aad1d187156725d52e1f8ee7756c20f6
-    sha256: dc6330364f92de95a315a19e842a26605d6ca5c7d346e77811d42ad0438e32d8
+    md5: 9cfe729c0b50e54ee8ea94506e55fe9f
+    sha256: 013c508647232836e00a4b0765dc8290004a8ef63f369fafc0c553cbc42b21a3
   category: main
   optional: false
 - name: rapidfuzz
@@ -1499,7 +1497,7 @@ package:
   category: main
   optional: false
 - name: keyring
-  version: 24.2.0
+  version: 24.3.0
   manager: conda
   platform: linux-64
   dependencies:
@@ -1509,10 +1507,10 @@ package:
     python: '>=3.11,<3.12.0a0'
     python_abi: 3.11.*
     secretstorage: '>=3.2'
-  url: https://conda.anaconda.org/conda-forge/linux-64/keyring-24.2.0-py311h38be061_1.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/keyring-24.3.0-py311h38be061_0.conda
   hash:
-    md5: 656d1107cb4934fd950eea244affd3c5
-    sha256: 495b04b64d897361b4336e6954ef66a2287191344c573d37c4217738b75bbc44
+    md5: 09e27eb40c88f732a4e0ea5b70f63ae0
+    sha256: 29909aa6935d34f46b9121bfb504e8305af525a27639bbf5d2692fce2935e9bc
   category: main
   optional: false
 - name: pre-commit
@@ -1568,7 +1566,7 @@ package:
   category: main
   optional: false
 - name: poetry
-  version: 1.7.0
+  version: 1.7.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -1581,26 +1579,26 @@ package:
     keyring: '>=24.0.0,<25.0.0'
     packaging: '>=20.5'
     pexpect: '>=4.7.0,<5.0.0'
-    pkginfo: '>=1.9.4,<2.0'
+    pkginfo: '>=1.9.4,<2.0.0'
     platformdirs: '>=3.0.0,<4.0.0'
-    poetry-core: 1.8.1
+    poetry-core: 1.8.1.*
     poetry-plugin-export: '>=1.6.0,<2.0.0'
     pyproject_hooks: '>=1.0.0,<2.0.0'
     python: '>=3.8,<4.0'
     python-build: '>=1.0.3,<2.0.0'
     python-fastjsonschema: '>=2.18.0,<3.0.0'
     python-installer: '>=0.7.0,<0.8.0'
-    requests: '>=2.26,<3.0'
+    requests: '>=2.26.0,<3.0.0'
     requests-toolbelt: '>=0.9.1,<2'
     shellingham: '>=1.5.0,<2.0.0'
     tomli: '>=2.0.1,<3.0.0'
     tomlkit: '>=0.11.4,<1.0.0'
     trove-classifiers: '>=2022.5.19'
     virtualenv: '>=20.23.0,<21.0.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/poetry-1.7.0-linux_pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/poetry-1.7.1-linux_pyha804496_0.conda
   hash:
-    md5: fe728caececde5886b73e3a4237a826a
-    sha256: 0f92788d97daea4a85a5f3d15ebc05c05c57fa32bfc07a125871b592370aaeae
+    md5: f4ead25aee9d567898e970a107bcac7e
+    sha256: 4e9212bd2470ea085b5198db2036fbad8bb174e606121751023d704c5172eb41
   category: main
   optional: false
 - name: bzip2
@@ -1670,14 +1668,14 @@ package:
   category: main
   optional: false
 - name: llvm-openmp
-  version: 17.0.4
+  version: 17.0.5
   manager: conda
   platform: osx-64
   dependencies: {}
-  url: https://conda.anaconda.org/conda-forge/osx-64/llvm-openmp-17.0.4-hb6ac08f_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/llvm-openmp-17.0.5-hb6ac08f_0.conda
   hash:
-    md5: 31391b68245bc68504169e98ffaf2c44
-    sha256: d49b6958d22075de5fb707fd5f593cfa4be059015db48b7f1cd5e47e7efde2ff
+    md5: 8ca3784280b7cb54163a46e8a918fb43
+    sha256: 8ad5acab5d5fb38785c6f41e17e5e1729f305f4838cc3a4470688c6cf942c0da
   category: main
   optional: false
 - name: python_abi
@@ -2140,15 +2138,15 @@ package:
   category: main
   optional: false
 - name: python-fastjsonschema
-  version: 2.18.1
+  version: 2.19.0
   manager: conda
   platform: osx-64
   dependencies:
     python: '>=3.3'
-  url: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.18.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.19.0-pyhd8ed1ab_0.conda
   hash:
-    md5: 305141cff54af2f90e089d868fffce28
-    sha256: 3fb1af1ac7525072c46e111bc4e96ddf971f792ab049ca3aa25dbebbaffb6f7d
+    md5: e4dbdb3585c0266b4710467fe7b75cf4
+    sha256: fdfe3f387c5ebde803605e1e90871c424519d2bfe2eb3bf9caad1c5a07f4c462
   category: main
   optional: false
 - name: python-installer
@@ -2263,15 +2261,15 @@ package:
   category: main
   optional: false
 - name: tomlkit
-  version: 0.12.2
+  version: 0.12.3
   manager: conda
   platform: osx-64
   dependencies:
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/tomlkit-0.12.2-pyha770c72_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/tomlkit-0.12.3-pyha770c72_0.conda
   hash:
-    md5: 495ddad84b81dde4ee1138dd59ef5805
-    sha256: 2db2564e0332f051f46670fb7c430b53d3d596f102f7d9994e84cf8afae2a12f
+    md5: 074d0ce7a6261ab8b497c3518796ef3e
+    sha256: 53cc436ab92d38683df1320e4468a8b978428e800195bf1c8c2460e90b0bc117
   category: main
   optional: false
 - name: toolz
@@ -2287,15 +2285,15 @@ package:
   category: main
   optional: false
 - name: trove-classifiers
-  version: 2023.11.9
+  version: 2023.11.14
   manager: conda
   platform: osx-64
   dependencies:
-    python: '>=3.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/trove-classifiers-2023.11.9-pyhd8ed1ab_0.conda
+    python: '>=3.7'
+  url: https://conda.anaconda.org/conda-forge/noarch/trove-classifiers-2023.11.14-pyhd8ed1ab_0.conda
   hash:
-    md5: b9969f8fbfe372b437f794598c235601
-    sha256: 1a4906ba734fda0ea82bab2da20369172f2054d0c84fe51a3f45e44ca1adc7bb
+    md5: dee8232c4bb962881f8e67588cd31670
+    sha256: 0e1e6f6377f454a7f4c50fa3f650a2114175861905e8d0dc759aeac2724730b0
   category: main
   optional: false
 - name: typing_extensions
@@ -2657,17 +2655,17 @@ package:
   category: main
   optional: false
 - name: pydantic-core
-  version: 2.10.1
+  version: 2.14.3
   manager: conda
   platform: osx-64
   dependencies:
     python: '>=3.11,<3.12.0a0'
     python_abi: 3.11.*
     typing-extensions: '>=4.6.0'
-  url: https://conda.anaconda.org/conda-forge/osx-64/pydantic-core-2.10.1-py311h299eb51_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/pydantic-core-2.14.3-py311h5e0f0e4_0.conda
   hash:
-    md5: 580ad4783a19b4d9ec0640dc4d81f28e
-    sha256: 56fc2f264b078de740ae087fee48b9d32eb045da5676a2d4ef085080c243e727
+    md5: 1b87067ac4343a98fa879a4342410638
+    sha256: c6efafc4003ca8b691bed262701edf1c0c8e2ebc3ad433f15dc2408d0340b797
   category: main
   optional: false
 - name: python-build
@@ -2776,7 +2774,7 @@ package:
   category: main
   optional: false
 - name: keyring
-  version: 24.2.0
+  version: 24.3.0
   manager: conda
   platform: osx-64
   dependencies:
@@ -2784,25 +2782,25 @@ package:
     jaraco.classes: ''
     python: '>=3.11,<3.12.0a0'
     python_abi: 3.11.*
-  url: https://conda.anaconda.org/conda-forge/osx-64/keyring-24.2.0-py311h6eed73b_1.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/keyring-24.3.0-py311h6eed73b_0.conda
   hash:
-    md5: dc0383887b837540194b65204521b8b3
-    sha256: dedbbb7d109ad054eb80419aaa9aae6f86d39c892bc278aa04a3980c3bddbbea
+    md5: 2477bfca2a6eae7d1b72530225febae6
+    sha256: 1cafeae8549f6f04da024dd2863f027b587018c7a1a570399e366053bc2cf16c
   category: main
   optional: false
 - name: pydantic
-  version: 2.4.2
+  version: 2.5.1
   manager: conda
   platform: osx-64
   dependencies:
     python: '>=3.7'
     annotated-types: '>=0.4.0'
     typing-extensions: '>=4.6.1'
-    pydantic-core: 2.10.1
-  url: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.4.2-pyhd8ed1ab_1.conda
+    pydantic-core: 2.14.3
+  url: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.5.1-pyhd8ed1ab_0.conda
   hash:
-    md5: aad1d187156725d52e1f8ee7756c20f6
-    sha256: dc6330364f92de95a315a19e842a26605d6ca5c7d346e77811d42ad0438e32d8
+    md5: 9cfe729c0b50e54ee8ea94506e55fe9f
+    sha256: 013c508647232836e00a4b0765dc8290004a8ef63f369fafc0c553cbc42b21a3
   category: main
   optional: false
 - name: rapidfuzz
@@ -2930,12 +2928,13 @@ package:
   category: main
   optional: false
 - name: poetry
-  version: 1.7.0
+  version: 1.7.1
   manager: conda
   platform: osx-64
   dependencies:
     __osx: ''
     python: '>=3.8,<4.0'
+    requests: '>=2.26.0,<3.0.0'
     tomli: '>=2.0.1,<3.0.0'
     packaging: '>=20.5'
     importlib-metadata: '>=4.4'
@@ -2943,27 +2942,26 @@ package:
     pexpect: '>=4.7.0,<5.0.0'
     trove-classifiers: '>=2022.5.19'
     dulwich: '>=0.21.2,<0.22.0'
-    pkginfo: '>=1.9.4,<2.0'
     pyproject_hooks: '>=1.0.0,<2.0.0'
     python-installer: '>=0.7.0,<0.8.0'
     platformdirs: '>=3.0.0,<4.0.0'
     requests-toolbelt: '>=0.9.1,<2'
     tomlkit: '>=0.11.4,<1.0.0'
     shellingham: '>=1.5.0,<2.0.0'
-    xattr: '>=0.10.0,<0.11.0'
     cachecontrol-with-filecache: '>=0.13.0,<0.14.0'
     keyring: '>=24.0.0,<25.0.0'
-    requests: '>=2.26,<3.0'
+    xattr: '>=0.10.0,<0.11.0'
     cleo: '>=2.1.0,<3.0.0'
-    poetry-core: 1.8.1
     poetry-plugin-export: '>=1.6.0,<2.0.0'
     python-build: '>=1.0.3,<2.0.0'
     python-fastjsonschema: '>=2.18.0,<3.0.0'
     virtualenv: '>=20.23.0,<21.0.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/poetry-1.7.0-osx_pyh534df25_0.conda
+    pkginfo: '>=1.9.4,<2.0.0'
+    poetry-core: 1.8.1.*
+  url: https://conda.anaconda.org/conda-forge/noarch/poetry-1.7.1-osx_pyh534df25_0.conda
   hash:
-    md5: 26061ea3c5cec03e7282bd5ab8e1493a
-    sha256: 38bedc995fdb6cafb849f963b62ebd97bb13be438cef0625fea60f844df68651
+    md5: 4ebf180279e2c0274249cafdd29720cf
+    sha256: 4c3d206537a4bc2135c69ac3b81ffc35881288a1bcef72899a2e492c745b69ad
   category: main
   optional: false
 - name: ca-certificates
@@ -3523,15 +3521,15 @@ package:
   category: main
   optional: false
 - name: python-fastjsonschema
-  version: 2.18.1
+  version: 2.19.0
   manager: conda
   platform: win-64
   dependencies:
     python: '>=3.3'
-  url: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.18.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.19.0-pyhd8ed1ab_0.conda
   hash:
-    md5: 305141cff54af2f90e089d868fffce28
-    sha256: 3fb1af1ac7525072c46e111bc4e96ddf971f792ab049ca3aa25dbebbaffb6f7d
+    md5: e4dbdb3585c0266b4710467fe7b75cf4
+    sha256: fdfe3f387c5ebde803605e1e90871c424519d2bfe2eb3bf9caad1c5a07f4c462
   category: main
   optional: false
 - name: python-installer
@@ -3665,15 +3663,15 @@ package:
   category: main
   optional: false
 - name: tomlkit
-  version: 0.12.2
+  version: 0.12.3
   manager: conda
   platform: win-64
   dependencies:
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/tomlkit-0.12.2-pyha770c72_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/tomlkit-0.12.3-pyha770c72_0.conda
   hash:
-    md5: 495ddad84b81dde4ee1138dd59ef5805
-    sha256: 2db2564e0332f051f46670fb7c430b53d3d596f102f7d9994e84cf8afae2a12f
+    md5: 074d0ce7a6261ab8b497c3518796ef3e
+    sha256: 53cc436ab92d38683df1320e4468a8b978428e800195bf1c8c2460e90b0bc117
   category: main
   optional: false
 - name: toolz
@@ -3689,15 +3687,15 @@ package:
   category: main
   optional: false
 - name: trove-classifiers
-  version: 2023.11.9
+  version: 2023.11.14
   manager: conda
   platform: win-64
   dependencies:
-    python: '>=3.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/trove-classifiers-2023.11.9-pyhd8ed1ab_0.conda
+    python: '>=3.7'
+  url: https://conda.anaconda.org/conda-forge/noarch/trove-classifiers-2023.11.14-pyhd8ed1ab_0.conda
   hash:
-    md5: b9969f8fbfe372b437f794598c235601
-    sha256: 1a4906ba734fda0ea82bab2da20369172f2054d0c84fe51a3f45e44ca1adc7bb
+    md5: dee8232c4bb962881f8e67588cd31670
+    sha256: 0e1e6f6377f454a7f4c50fa3f650a2114175861905e8d0dc759aeac2724730b0
   category: main
   optional: false
 - name: typing_extensions
@@ -4064,7 +4062,7 @@ package:
   category: main
   optional: false
 - name: pydantic-core
-  version: 2.10.1
+  version: 2.14.3
   manager: conda
   platform: win-64
   dependencies:
@@ -4074,10 +4072,10 @@ package:
     ucrt: '>=10.0.20348.0'
     vc: '>=14.2,<15'
     vc14_runtime: '>=14.29.30139'
-  url: https://conda.anaconda.org/conda-forge/win-64/pydantic-core-2.10.1-py311hc37eb10_0.conda
+  url: https://conda.anaconda.org/conda-forge/win-64/pydantic-core-2.14.3-py311hc37eb10_0.conda
   hash:
-    md5: 03f6bd3dfa06738a8b1d23c34bd80395
-    sha256: 0434aa3f7dc0f9bb9ec31f91398d10a1f73fa23fa05fb5052f483a6a3a20d19d
+    md5: 23e28a35d6467d7d73b85c989ed2dab8
+    sha256: 0687852efc376deadb025190cb899ea2f10cd6b80a4ab31f8f726b90b8b6c5f5
   category: main
   optional: false
 - name: python-build
@@ -4159,7 +4157,7 @@ package:
   category: main
   optional: false
 - name: keyring
-  version: 24.2.0
+  version: 24.3.0
   manager: conda
   platform: win-64
   dependencies:
@@ -4168,10 +4166,10 @@ package:
     python: '>=3.11,<3.12.0a0'
     python_abi: 3.11.*
     pywin32-ctypes: '>=0.2.0'
-  url: https://conda.anaconda.org/conda-forge/win-64/keyring-24.2.0-py311h1ea47a8_1.conda
+  url: https://conda.anaconda.org/conda-forge/win-64/keyring-24.3.0-py311h1ea47a8_0.conda
   hash:
-    md5: d48701e08cf146d16560cbcf52e27d4d
-    sha256: ee5ebe93d9a141f19b3001c44d4007e6cdd52cfb8003d0c53c9ce17ee9121290
+    md5: 36b1b2b2889d253cb8bb0b80a9cb1493
+    sha256: 31a737db3d02c5ab7a63f4d9da6f8cc73d76df9e0c41c9057b1cd631526aca8d
   category: main
   optional: false
 - name: libblas
@@ -4187,18 +4185,18 @@ package:
   category: main
   optional: false
 - name: pydantic
-  version: 2.4.2
+  version: 2.5.1
   manager: conda
   platform: win-64
   dependencies:
     python: '>=3.7'
     annotated-types: '>=0.4.0'
     typing-extensions: '>=4.6.1'
-    pydantic-core: 2.10.1
-  url: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.4.2-pyhd8ed1ab_1.conda
+    pydantic-core: 2.14.3
+  url: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.5.1-pyhd8ed1ab_0.conda
   hash:
-    md5: aad1d187156725d52e1f8ee7756c20f6
-    sha256: dc6330364f92de95a315a19e842a26605d6ca5c7d346e77811d42ad0438e32d8
+    md5: 9cfe729c0b50e54ee8ea94506e55fe9f
+    sha256: 013c508647232836e00a4b0765dc8290004a8ef63f369fafc0c553cbc42b21a3
   category: main
   optional: false
 - name: requests
@@ -4416,12 +4414,13 @@ package:
   category: main
   optional: false
 - name: poetry
-  version: 1.7.0
+  version: 1.7.1
   manager: conda
   platform: win-64
   dependencies:
     __win: ''
     python: '>=3.8,<4.0'
+    requests: '>=2.26.0,<3.0.0'
     tomli: '>=2.0.1,<3.0.0'
     packaging: '>=20.5'
     importlib-metadata: '>=4.4'
@@ -4429,7 +4428,6 @@ package:
     pexpect: '>=4.7.0,<5.0.0'
     trove-classifiers: '>=2022.5.19'
     dulwich: '>=0.21.2,<0.22.0'
-    pkginfo: '>=1.9.4,<2.0'
     pyproject_hooks: '>=1.0.0,<2.0.0'
     python-installer: '>=0.7.0,<0.8.0'
     platformdirs: '>=3.0.0,<4.0.0'
@@ -4438,16 +4436,16 @@ package:
     shellingham: '>=1.5.0,<2.0.0'
     cachecontrol-with-filecache: '>=0.13.0,<0.14.0'
     keyring: '>=24.0.0,<25.0.0'
-    requests: '>=2.26,<3.0'
     cleo: '>=2.1.0,<3.0.0'
-    poetry-core: 1.8.1
     poetry-plugin-export: '>=1.6.0,<2.0.0'
     python-build: '>=1.0.3,<2.0.0'
     python-fastjsonschema: '>=2.18.0,<3.0.0'
     virtualenv: '>=20.23.0,<21.0.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/poetry-1.7.0-win_pyh7428d3b_0.conda
+    pkginfo: '>=1.9.4,<2.0.0'
+    poetry-core: 1.8.1.*
+  url: https://conda.anaconda.org/conda-forge/noarch/poetry-1.7.1-win_pyh7428d3b_0.conda
   hash:
-    md5: 415d075755ea5362d80877ef20a1f730
-    sha256: 786559ae179703a0ba644dbed7187a4969602e944144595bb151fcafc758ff0c
+    md5: 40353a0da2dabf3c044136c802ff77bb
+    sha256: e5a04202080debb11275be19d0e686fc848ebf6b5ac7b59be946aa0424f0ef8f
   category: main
   optional: false
