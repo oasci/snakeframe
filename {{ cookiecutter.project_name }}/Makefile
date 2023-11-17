@@ -93,6 +93,10 @@ formatting:
 test:
 	$(CONDA) pytest -c pyproject.toml --cov=$(PACKAGE_NAME) --cov-report=xml --junit-xml=report.xml $(TESTS_PATH)
 
+.PHONY: coverage
+coverage:
+	$(CONDA) coverage report
+
 .PHONY: check-codestyle
 check-codestyle:
 	$(CONDA) isort --diff --check-only $(PACKAGE_PATH)

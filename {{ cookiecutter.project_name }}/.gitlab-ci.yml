@@ -19,7 +19,7 @@ tests:
   stage: test
   script:
     - make test
-    - coverage report  # for displaying coverage in job logs
+    - make coverage  # for displaying coverage in job logs
   coverage: '/^TOTAL.+?(\d+\%)$/'
   artifacts:
     when: always
