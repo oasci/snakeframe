@@ -16,6 +16,9 @@ ORGANIZATION = "{{ cookiecutter.organization }}"
 GIT_HOST = "{{ cookiecutter.git_host }}"
 USER_NAME = "{{ cookiecutter.user_name }}"
 
+# Docs
+DOCS_ENGINE = "{{ cookiecutter.docs }}"
+
 licenses_dict = {
     "MIT": "mit",
     "BSD-3": "bsd3",
@@ -52,6 +55,15 @@ def remove_unused_files(directory: Path) -> None:
         files_to_delete.append(os.path.join(directory, ".gitlab-ci.yml"))
     if GIT_HOST == "GitLab":
         files_to_delete.append(os.path.join(directory, ".github"))
+
+    if DOCS_ENGINE == "mkdocs":
+        files_to_delete.append(os.path.join(directory, "docs", "_templates"))
+        files_to_delete.append(os.path.join(directory, "docs", "conf.py"))
+    if DOCS_ENGINE == "sphinx":
+        files_to_delete.append(os.path.join(directory, "mkdocs.yml"))
+        files_to_delete.append(os.path.join(directory, "docs", "css"))
+        files_to_delete.append(os.path.join(directory, "docs", "overrides"))
+        files_to_delete.append(os.path.join(directory, "docs", "gen_ref_pages.py"))
 
     for path in files_to_delete:
         if os.path.isdir(path):

@@ -627,3 +627,5 @@ psi.*.clean
 
 tests/tmp/*
 !tests/tmp/.gitkeep
+
+environment.yml

@@ -2,11 +2,11 @@ SHELL := /usr/bin/env bash
 PYTHON_VERSION := {{ cookiecutter.dev_python_version }}
 PYTHON_VERSION_CONDENSED := {{ cookiecutter.dev_python_version.replace('.', '') }}
 PACKAGE_NAME := {{ cookiecutter.project_name }}
-REPO_PATH := $(shell git rev-parse --show-toplevel)
-PACKAGE_PATH := $(REPO_PATH)/$(PACKAGE_NAME)
-TESTS_PATH := $(REPO_PATH)/tests
+PACKAGE_PATH := $(PACKAGE_NAME)/
+TESTS_PATH := tests/
 CONDA_NAME := $(PACKAGE_NAME)-dev
 CONDA := conda run -n $(CONDA_NAME)
+CONDA_LOCK_OPTIONS := -p linux-64 -p osx-64 -p win-64 --channel conda-forge
 
 
 ###   ENVIRONMENT   ###
@@ -37,16 +37,16 @@ conda-dependencies:
 
 .PHONY: conda-lock
 conda-lock:
-	- rm $(REPO_PATH)/conda-lock.yml
+	- rm conda-lock.yml
 	$(CONDA) conda env export --from-history | grep -v "^prefix" > environment.yml
-	$(CONDA) conda-lock -f environment.yml -p linux-64 -p osx-64 -p win-64
-	rm $(REPO_PATH)/environment.yml
-	$(CONDA) cpl-deps $(REPO_PATH)/pyproject.toml --env_name $(CONDA_NAME)
+	$(CONDA) conda-lock -f environment.yml $(CONDA_LOCK_OPTIONS)
+	rm environment.yml
+	$(CONDA) cpl-deps pyproject.toml --env_name $(CONDA_NAME)
 	$(CONDA) cpl-clean --env_name $(CONDA_NAME)
 
 .PHONY: from-conda-lock
 from-conda-lock:
-	$(CONDA) conda-lock install -n $(CONDA_NAME) $(REPO_PATH)/conda-lock.yml
+	$(CONDA) conda-lock install -n $(CONDA_NAME) conda-lock.yml
 	$(CONDA) cpl-clean --env_name $(CONDA_NAME)
 
 .PHONY: pre-commit-install
@@ -64,8 +64,8 @@ install:
 	- mkdir .mypy_cache
 	- $(CONDA) poetry run mypy --install-types --non-interactive --explicit-package-bases $(PACKAGE_NAME)
 
-.PHONY: refresh
-refresh: conda-create from-conda-lock pre-commit-install install
+.PHONY: environment
+environment: conda-create from-conda-lock pre-commit-install install
 
 .PHONY: refresh-locks
 refresh-locks: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
@@ -148,7 +148,20 @@ build:
 
 ###   DOCS   ###
 
+{% if cookiecutter.docs == "mkdocs" -%}
+.PHONY: serve
+serve:
+	echo "Served at http://127.0.0.1:8910/"
+	$(CONDA) mkdocs serve -a localhost:8910
 
+.PHONY: docs
+docs:
+	$(CONDA) mkdocs build -d public/
+
+.PHONY: open-docs
+open-docs:
+	xdg-open public/index.html 2>/dev/null
+{% else %}
 .PHONY: docs
 docs:
 	rm -rf public/
@@ -169,3 +182,4 @@ docs-versioned:
 .PHONY: open-docs
 open-docs:
 	xdg-open public/index.html 2>/dev/null
+{% endif -%}
