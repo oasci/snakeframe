@@ -51,6 +51,7 @@ sphinx-autoapi = "^2.1.1"
 sphinx-autodoc-typehints = "^1.24.0"
 sphinx-copybutton = "^0.5.2"
 myst-parser = "^2.0.0"
+myst-nb = "^1.0.0"
 pydocstyle = "^6.3.0"
 sphinx-togglebutton = "^0.3.2"
 {%- endif %}
@@ -78,10 +79,6 @@ patterns = [
 folders = [
   { path = "conda_poetry_liaison" }
 ]
-
-[tool.poetry.group.docs.dependencies.myst-nb]
-git = "https://github.com/executablebooks/MyST-NB"
-rev = "48edb5d852eb73b09eae962c7518045f836633d5"
 
 [build-system]
 requires = [

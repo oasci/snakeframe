@@ -44,16 +44,13 @@ sphinx-autoapi = "^2.1.1"
 sphinx-autodoc-typehints = "^1.24.0"
 sphinx-copybutton = "^0.5.2"
 myst-parser = "^2.0.0"
+myst-nb = "^1.0.0"
 pydocstyle = "^6.3.0"
 sphinx-togglebutton = "^0.3.2"
 sphinxcontrib-bibtex = "^2.6.1"
 folium = "^0.14.0"
 matplotlib = "^3.8.0"
 numpy = "^1.26.0"
-
-[tool.poetry.group.docs.dependencies.myst-nb]
-git = "https://github.com/executablebooks/MyST-NB"
-rev = "8428815cda8af7937993241eaa6fa76eb1635497"
 
 [tool.bumpversion]
 current_version = "0.1.1"
