@@ -69,13 +69,7 @@ replace = "[Unreleased]\n\n## [{new_version}] - {now:%Y-%m-%d}"
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
-{% raw %}format-jinja = """
-    {%- if distance == 0 -%}
-        {{ serialize_pep440(base) }}
-    {%- else -%}
-        {{ serialize_pep440(base, post=distance) }}
-    {%- endif -%}
-"""{% endraw %}
+{% raw %}format-jinja = "{%- if distance == 0 -%}{{ serialize_pep440(base) }}{%- else -%}{{ serialize_pep440(base, post=distance) }}{%- endif -%}"{% endraw %}
 
 [tool.poetry-dynamic-versioning.substitution]
 patterns = [
