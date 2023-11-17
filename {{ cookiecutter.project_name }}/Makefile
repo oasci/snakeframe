@@ -84,10 +84,7 @@ formatting:
 	- $(CONDA) black --config pyproject.toml ./
 
 
-
-
-###   LINTING   ###
-
+###   TESTING   ###
 
 .PHONY: test
 test:
@@ -96,6 +93,9 @@ test:
 .PHONY: coverage
 coverage:
 	$(CONDA) coverage report
+
+
+###   LINTING   ###
 
 .PHONY: check-codestyle
 check-codestyle:
