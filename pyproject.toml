@@ -11,6 +11,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
 cookiecutter = "^2.3.0"
+loguru = "^0.7.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.9.0"
