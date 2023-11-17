@@ -6,12 +6,14 @@ default:
 
 pages:
   script:
-  - make docs
+    - make docs
   artifacts:
     paths:
-    - public/
+      - public/
   rules:
-  - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH"
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_COMMIT_TAG
+    - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH"
   stage: deploy
 
 
@@ -29,3 +31,7 @@ tests:
         path: coverage.xml
       junit: report.xml
   interruptible: true
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_COMMIT_TAG
+    - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH"
