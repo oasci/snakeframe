@@ -21,7 +21,6 @@ mypy-extensions = "^1.0.0"
 bump-my-version = "^0.11.0"
 poetry-dynamic-versioning = "^1.1.0"
 
-
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.2"
 pytest-cov = "^4.1.0"
@@ -29,7 +28,17 @@ coverage = "^7.3.1"
 pytest-html = "^4.0.1"
 colorama = "^0.4.6"
 
-
+{% if cookiecutter.docs == "mkdocs" -%}
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.4.7"
+material-plausible-plugin = "^0.2.0"
+pymdown-extensions = "^10.3.1"
+mkdocs-table-reader-plugin = "^2.0.3"
+mkdocstrings = "^0.23.0"
+mkdocstrings-python = "^1.7.3"
+mkdocs-gen-files = "^0.5.0"
+{% else %}
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.2.6"
 sphinx-multiversion = "^0.2.4"
@@ -43,7 +52,7 @@ sphinx-copybutton = "^0.5.2"
 myst-parser = "^2.0.0"
 pydocstyle = "^6.3.0"
 sphinx-togglebutton = "^0.3.2"
-sphinxcontrib-bibtex = "^2.6.1"
+{%- endif %}
 
 [tool.bumpversion]
 current_version = "0.0.0"

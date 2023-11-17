@@ -7,6 +7,7 @@
   "min_python_version": ["3.9", "3.10", "3.11", "3.12"],
   "dev_python_version": ["3.12", "3.11", "3.10", "3.9"],
   "git_host": ["GitHub", "GitLab"],
+  "docs": ["mkdocs", "sphinx"],
   "user_name": "{{ cookiecutter.organization }}",
   "email": "hello@{{ cookiecutter.organization }}.com",
   "line_length": 88,

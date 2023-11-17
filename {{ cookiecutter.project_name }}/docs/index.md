@@ -27,11 +27,3 @@ Code contained in this project is released under the {{ cookiecutter.license }} 
 This license grants you the freedom to use, modify, and distribute it as long as you include the original copyright notice contained in `LICENSE.md` and the following disclaimer.
 
 > Portions of this code were incorporated and adapted with permission from {{ cookiecutter.project_name }} by {{ cookiecutter.user_name }} licensed under the {{ cookiecutter.license }} License.
-
-```{toctree}
-:hidden:
-
-makefile.md
-poetry.md
-jupyter-notebooks.ipynb
-```
