@@ -114,7 +114,7 @@ indent = 4
 color_output = true
 
 [tool.mypy]
-python_version = 3.11
+python_version = "3.11"
 pretty = true
 show_traceback = true
 color_output = true
