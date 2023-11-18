@@ -17,7 +17,7 @@ LOG_FORMAT = (
 
 
 def enable_logging(
-    level_set: int, stdout_set: bool = True, file_path_set: str | None = None
+    level_set: int, stdout_set: bool = True, file_path: str | None = None
 ) -> None:
     r"""Enable logging.
 
@@ -30,9 +30,9 @@ def enable_logging(
         config["handlers"].append(
             {"sink": sys.stdout, "level": level_set, "format": LOG_FORMAT}
         )
-    if isinstance(file_path_set, str):
+    if isinstance(file_path, str):
         config["handlers"].append(
-            {"sink": file_path_set, "level": level_set, "format": LOG_FORMAT}
+            {"sink": file_path, "level": level_set, "format": LOG_FORMAT}
         )
     # https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.configure
     logger.configure(**config)
@@ -43,5 +43,5 @@ def enable_logging(
 if literal_eval(os.environ.get("{{ cookiecutter.project_name.upper() }}_LOG", "False")):
     level = int(os.environ.get("{{ cookiecutter.project_name.upper() }}_LOG_LEVEL", 20))
     stdout = literal_eval(os.environ.get("{{ cookiecutter.project_name.upper() }}_STDOUT", "True"))
-    file_path = os.environ.get("{{ cookiecutter.project_name.upper() }}_LOG_FILE_PATH", None)
-    enable_logging(level, stdout, file_path)
+    log_file_path = os.environ.get("{{ cookiecutter.project_name.upper() }}_LOG_FILE_PATH", None)
+    enable_logging(level, stdout, log_file_path)
