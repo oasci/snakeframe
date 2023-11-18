@@ -88,7 +88,7 @@ formatting:
 
 .PHONY: test
 test:
-	$(CONDA) pytest -c pyproject.toml --cov=$(PACKAGE_NAME) --cov-report=xml --junit-xml=report.xml $(TESTS_PATH)
+	$(CONDA) pytest -c pyproject.toml --cov=$(PACKAGE_NAME) --cov-report=xml --junit-xml=report.xml --color=yes $(TESTS_PATH)
 
 .PHONY: coverage
 coverage:
