@@ -62,7 +62,7 @@ poetry-lock:
 install:
 	$(CONDA) poetry install --no-interaction
 	- mkdir .mypy_cache
-	- $(CONDA) poetry run mypy --install-types --non-interactive --explicit-package-bases $(PACKAGE_NAME)
+	- $(CONDA) mypy --install-types --non-interactive --explicit-package-bases $(PACKAGE_NAME)
 
 .PHONY: environment
 environment: conda-create from-conda-lock pre-commit-install install
