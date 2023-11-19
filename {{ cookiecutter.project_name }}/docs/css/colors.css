@@ -7,10 +7,10 @@
     --md-primary-bg-color--light:        #DBDBDB; /* Secondary header text */
 
     /* Default color shades */
-    --md-default-fg-color:               #e2e4e9; /* ??? */
-    --md-default-fg-color--light:        #7e7e7e; /* h1 */
-    --md-default-fg-color--lighter:      #e2e4e9; /* ??? */
-    --md-default-fg-color--lightest:     #e2e4e9; /* ??? */
+    --md-default-fg-color:               #646464; /* ??? */
+    --md-default-fg-color--light:        #7A7A7A; /* h1 */
+    --md-default-fg-color--lighter:      #9B9B9B; /* ??? */
+    --md-default-fg-color--lightest:     #BCBCBC; /* ??? */
 
     --md-default-bg-color:               #FAFAFA; /* Body background */
     --md-default-bg-color--light:        #FAFAFA;
