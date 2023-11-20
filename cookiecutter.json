@@ -1,8 +1,8 @@
 {
   "project_name": "python_project",
-  "project_description": "Awesome `{{ cookiecutter.project_name }}` is a Python package created with https://github.com/oasci/snakeframe",
+  "project_description": "Awesome `{{ cookiecutter.project_name }}` is a Python package created with https://gitlab.com/oasci/software/snakeframe",
   "organization": "{{ cookiecutter.project_name }}",
-  "license": ["Apache Software License 2.0", "MIT", "BSD-3", "GNU GPL v3.0"],
+  "license": ["Apache-2.0", "MIT", "BSD-3-Clause", "GPL-3.0-only"],
   "_all_python_minor_version": ["11", "10", "9"],
   "min_python_version": ["3.9", "3.10", "3.11", "3.12"],
   "dev_python_version": ["3.12", "3.11", "3.10", "3.9"],
@@ -10,8 +10,5 @@
   "docs": ["mkdocs", "sphinx"],
   "user_name": "{{ cookiecutter.organization }}",
   "email": "hello@{{ cookiecutter.organization }}.com",
-  "line_length": 88,
-  "_copy_without_render": [
-    "poetry.lock"
-  ]
+  "line_length": 88
 }
