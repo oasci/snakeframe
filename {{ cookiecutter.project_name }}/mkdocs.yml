@@ -64,7 +64,7 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
-          paths: ["metalflare"]
+          paths: ["{{ cookiecutter.project_name }}"]
           options:
             annotations_path: brief
             docstring_style: google
