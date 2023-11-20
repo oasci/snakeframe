@@ -41,7 +41,7 @@
     --md-typeset-color:                  #212529; /* Main text color */
 
     /* Typeset `a` color shades */
-    --md-typeset-a-color:                #032779; /* Link color */
+    --md-typeset-a-color:                #01a0d7; /* Link color */
 
     /* Typeset `table` color shades */
     --md-typeset-table-color:            #a5a5a5;  /* Outline color */
@@ -55,10 +55,14 @@
     --md-footer-bg-color--dark:          #212529; /* Footer background */
 
     /* Accent color shades */
-    --md-accent-fg-color:                var(--md-primary-fg-color); /* Hover over link */
+    --md-accent-fg-color:                #032779; /* Hover over link */
     --md-accent-fg-color--transparent:   var(--md-primary-fg-color);
     --md-accent-bg-color:                #ffffff;
     --md-accent-bg-color--light:         #e5e5e5;
+
+    /* Admonition colors */
+    --md-admonition-fg-color:            #212529;
+    --md-admonition-bg-color:            #FAFAFA;
 }
 
 [data-md-color-scheme="dark"] {
@@ -104,7 +108,7 @@
     --md-typeset-color:                  #ffffff; /* Main text color */
 
     /* Typeset `a` color shades */
-    --md-typeset-a-color:                #6b95ff; /* Link color */
+    --md-typeset-a-color:                #01a0d7; /* Link color */
 
     /* Typeset `table` color shades */
     --md-typeset-table-color:            #a5a5a5;  /* Outline color */
@@ -118,8 +122,13 @@
     --md-footer-bg-color--dark:          #171717; /* Footer background */
 
     /* Accent color shades */
-    --md-accent-fg-color:                #bbceff; /* Hover over link */
+    --md-accent-fg-color:                #90e0ef; /* Hover over link */
     --md-accent-fg-color--transparent:   var(--md-primary-fg-color);
     --md-accent-bg-color:                #ffffff;
     --md-accent-bg-color--light:         #e5e5e5;
+
+    /* Admonition colors */
+    --md-admonition-fg-color:            #ffffff;
+    --md-admonition-bg-color:            #212529;
+
 }
