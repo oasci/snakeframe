@@ -5,7 +5,7 @@ from pathlib import Path
 
 import mkdocs_gen_files
 
-SRC_DIR = "metalflare"
+SRC_DIR = "{{ cookiecutter.project_name }}"
 WRITE_DIR = "api"
 
 for path in sorted(Path(SRC_DIR).rglob("*.py")):  #
