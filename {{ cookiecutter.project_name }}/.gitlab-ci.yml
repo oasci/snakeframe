@@ -1,7 +1,9 @@
 default:
   image: continuumio/miniconda3
   before_script:
-    - apt-get update && apt-get install build-essential -y
+    - apt-get update
+    - apt-get install build-essential -y
+    - apt-get install curl -y
     - make environment
 
 pages:
@@ -22,6 +24,11 @@ tests:
   script:
     - make test
     - make coverage  # for displaying coverage in job logs
+
+    # Upload coverage to codecov
+    - curl -Os https://uploader.codecov.io/latest/linux/codecov
+    - chmod +x codecov
+    - ./codecov -t $CODECOV_TOKEN
   coverage: '/^TOTAL.+?(\d+\%)$/'
   artifacts:
     when: always
