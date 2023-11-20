@@ -36,7 +36,7 @@ def generate_license(directory: Path, license_choice: str) -> None:
     """
     move(
         str(directory / "_licenses" / f"{license_choice}.md"),
-        str(directory / "LICENSE"),
+        str(directory / "LICENSE.md"),
     )
     rmtree(str(directory / "_licenses"))
 

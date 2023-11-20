@@ -4,55 +4,71 @@
 
 Template generator will ask you to fill some variables.
 
-`project_name` (**Default:** `python_project`)
+### `project_name`
 
-> [Check the availability of possible name](http://ivantomic.com/projects/ospnc/) before creating the project.
-> Make sure it is lowercase, no spaces, and uses `_` if desired.
+**Default:** `python_project`
 
-`project_description` (**Default:** based on the `project_name`)
+[Check the availability of possible name](http://ivantomic.com/projects/ospnc/) before creating the project.
+Make sure it is lowercase, no spaces, and uses `_` if desired.
 
-> Brief description of your project.
+### `project_description`
 
-`organization` (**Default:** based on the `project_name`)
+**Default:** based on the `project_name`
 
-> Name of the organization. We need to generate LICENSE and to specify ownership in `pyproject.toml`.
+Brief description of your project.
 
-`license` (**Default:** `MIT`)
+### `organization`
 
-> One of `MIT`, `BSD-3`, `GNU GPL v3.0` and `Apache Software License 2.0`.
+**Default:** based on the `project_name`
 
-`min_python_version` (**Default:** `3.9`)
+Name of the organization. We need to generate LICENSE and to specify ownership in `pyproject.toml`.
 
-> Minimal Python version.
-> One of `3.9`, `3.10` and `3.11`.
-> It is used for builds, GitHub workflow and formatters (`black`, `isort` and `pyupgrade`).
+### `license`
 
-`dev_python_version` (**Default:** `3.11`)
+**Default:** `Apache-2.0`
 
-> Python version used for local development.
-> It is used for specifying the conda environment.
+One of `Apache-2.0`, `MIT`, `BSD-3-Clause` and `GPL-3.0-only`.
 
-`user_name` (**Default:** based on the `organization`)
+### `min_python_version`
 
-> GitHub username for hosting.
-> Also used to set up `README.md`, `pyproject.toml` and template files for GitHub.
+**Default:** `3.9`
 
-`email` (**Default:** based on the `organization`)
+Minimum version of Python for this package.
 
-> Email for `CODE_OF_CONDUCT.md` and to specify the ownership of the project in `pyproject.toml`.
+### `dev_python_version`
 
-`line_length` (**Default:** 88)
+**Default:** `3.12`
 
-> The max length per line (used for codestyle with `black` and `isort`). NOTE: This value must be between 50 and 300.
+Python version used for local development.
+It is used for specifying the conda environment.
 
-## Setup
+### `git_host`
 
-### Initialize `poetry`
+**Default:** `GitHub`
 
-By running `make install`
+Which website will host the repository: `GitHub` or `GitLab`?
 
-After you create a project, it will appear in your directory, and will display [a message about how to initialize the project](https://github.com/oasci/snakeframe/tree/main/%7B%7B%20cookiecutter.project_name%20%7D%7D#very-first-steps).
+### `docs`
 
-### Initialize `pre-commit`
+**Default:** `mkdocs`
 
-By running `make pre-commit-install`. Make sure to set up git first via `git init`.
+Which documentation engine do you want to use: `mkdocs` or `sphinx`?
+
+### `user_name`
+
+**Default:** based on the `organization`
+
+GitHub username for hosting.
+Also used to set up `README.md`, `pyproject.toml` and template files for GitHub.
+
+### `email`
+
+**Default:** based on the `organization`
+
+Email for `CODE_OF_CONDUCT.md` and to specify the ownership of the project in `pyproject.toml`.
+
+### `line_length`
+
+**Default:** 88
+
+The max length per line (used for codestyle with `black` and `isort`). NOTE: This value must be between 50 and 300.

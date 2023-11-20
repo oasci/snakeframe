@@ -152,22 +152,17 @@ build:
 
 ###   DOCS   ###
 
+.PHONY: serve
+serve:
+	echo "Served at http://127.0.0.1:8910/"
+	$(CONDA) mkdocs serve -a localhost:8910
+	- rm -rf 08-api/
+
 .PHONY: docs
 docs:
-	rm -rf public/
-	$(CONDA) sphinx-build -nT docs/ public/
-	touch public/.nojekyll
-
-.PHONY: docs-versioned
-docs-versioned:
-	rm -rf public/
-	$(CONDA) sphinx-multiversion -nT docs/ public/
-	touch public/.nojekyll
-
-	# Create html redirect to main
-	echo "<head>" > public/index.html
-	echo "  <meta http-equiv='refresh' content='0; URL=$(DOCS_URL)/main/index.html'>" >> public/index.html
-	echo "</head>" >> public/index.html
+	$(CONDA) mkdocs build -d public/
+	- rm -rf 08-api/
+	- rm -f public/gen_ref_pages.py
 
 .PHONY: open-docs
 open-docs:

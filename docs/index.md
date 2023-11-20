@@ -114,11 +114,3 @@ This license grants you the freedom to use, modify, and distribute it as long as
 [issue-template]: https://github.com/oasci/snakeframe/tree/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/.github/ISSUE_TEMPLATE
 [sphinx]: https://snakeframe.oasci.org/
 [docs.yml]: https://github.com/oasci/snakeframe/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/.github/workflows/deploy-docs.yml
-
-```{toctree}
-:hidden:
-
-makefile.md
-poetry.md
-jupyter-notebooks.ipynb
-```
