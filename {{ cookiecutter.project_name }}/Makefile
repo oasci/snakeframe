@@ -105,7 +105,7 @@ check-codestyle:
 
 .PHONY: mypy
 mypy:
-	-$(CONDA) mypy --config-file pyproject.toml $(PACKAGE_PATH)
+	- $(CONDA) mypy --config-file pyproject.toml $(PACKAGE_PATH)
 
 .PHONY: lint
 lint: check-codestyle mypy
@@ -134,12 +134,16 @@ ipynbcheckpoints-remove:
 pytestcache-remove:
 	find . | grep -E ".pytest_cache" | xargs rm -rf
 
+.PHONY: pytest-coverage
+pytest-coverage:
+	rm report.xml coverage.xml .coverage
+
 .PHONY: build-remove
 build-remove:
 	rm -rf build/
 
 .PHONY: cleanup
-cleanup: pycache-remove dsstore-remove mypycache-remove ipynbcheckpoints-remove pytestcache-remove
+cleanup: pycache-remove dsstore-remove mypycache-remove ipynbcheckpoints-remove pytestcache-remove pytest-coverage
 
 
 
@@ -157,10 +161,13 @@ build:
 serve:
 	echo "Served at http://127.0.0.1:8910/"
 	$(CONDA) mkdocs serve -a localhost:8910
+	- rm -rf 08-api/
 
 .PHONY: docs
 docs:
 	$(CONDA) mkdocs build -d public/
+	- rm -rf 08-api/
+	- rm -f public/gen_ref_pages.py
 
 .PHONY: open-docs
 open-docs:
