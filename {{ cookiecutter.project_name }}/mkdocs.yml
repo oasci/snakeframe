@@ -3,8 +3,8 @@ docs_dir: docs
 site_name: {{ cookiecutter.project_name }}
 site_author: {{ cookiecutter.organization }}
 
-# Github
-repo_name: {{ cookiecutter.project_name }}/{{ cookiecutter.organization }}
+# Git host
+repo_name: {{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
 repo_url: https://{{ cookiecutter.git_host.lower() }}.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
 
 # https://squidfunk.github.io/mkdocs-material/
