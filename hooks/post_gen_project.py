@@ -62,7 +62,7 @@ def remove_unused_files(directory: Path) -> None:
     if DOCS_ENGINE == "sphinx":
         files_to_delete.append(os.path.join(directory, "mkdocs.yml"))
         files_to_delete.append(os.path.join(directory, "docs", "css"))
-        files_to_delete.append(os.path.join(directory, "docs", "overrides"))
+        files_to_delete.append(os.path.join(directory, "docs", ".overrides"))
         files_to_delete.append(os.path.join(directory, "docs", "gen_ref_pages.py"))
 
     for path in files_to_delete:

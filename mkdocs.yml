@@ -10,7 +10,7 @@ repo_url: https://gitlab.com/oasci/software/snakeframe
 # https://squidfunk.github.io/mkdocs-material/
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: docs/.overrides
   language: en
   palette:
     # Palette toggle for light mode
