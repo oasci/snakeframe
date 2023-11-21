@@ -1,6 +1,5 @@
 {% if cookiecutter.docs == "mkdocs" -%}
 --8<-- "README.md"
-
 {% else %}
 <h1 align="center">{{ cookiecutter.project_name }}</h1>
 

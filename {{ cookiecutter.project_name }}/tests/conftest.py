@@ -1,9 +1,12 @@
 import os
+
 import pytest
+
 from {{ cookiecutter.project_name }} import enable_logging
 
 TEST_DIR = os.path.dirname(__file__)
 
+
 @pytest.fixture(scope="session", autouse=True)
 def turn_on_logging():
-    enable_logging(0)
+    enable_logging(10)
