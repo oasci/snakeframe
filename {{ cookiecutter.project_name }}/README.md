@@ -2,7 +2,7 @@
 
 <h4 align="center">{{ cookiecutter.project_description }}</h4>
 
-Add in information about {{ cookiecutter.project_name }} here.
+Add information about {{ cookiecutter.project_name }} here.
 
 ## Setup instructions
 

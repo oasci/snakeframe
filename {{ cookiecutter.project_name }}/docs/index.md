@@ -1,8 +1,12 @@
+{% if cookiecutter.docs == "mkdocs" -%}
+--8<-- "README.md"
+
+{% else %}
 <h1 align="center">{{ cookiecutter.project_name }}</h1>
 
 <h4 align="center">{{ cookiecutter.project_description }}</h4>
 
-Add in information about {{ cookiecutter.project_name }} here.
+Add information about {{ cookiecutter.project_name }} here.
 
 ## Deploying
 
@@ -24,3 +28,4 @@ git push --follow-tags
 ## License
 
 This project is released under the {{ cookiecutter.license }} License as specified in `LICENSE.md`.
+{%- endif %}
