@@ -7,7 +7,6 @@ TESTS_PATH := tests/
 CONDA_NAME := $(PACKAGE_NAME)-dev
 CONDA := conda run -n $(CONDA_NAME)
 CONDA_LOCK_OPTIONS := -p linux-64 -p osx-64 -p win-64 --channel conda-forge
-DOCS_URL := https://snakeframe.oasci.org
 
 ###   ENVIRONMENT   ###
 
@@ -34,6 +33,10 @@ conda-setup:
 .PHONY: conda-dependencies
 conda-dependencies:
 	echo "No conda-only packages are required."
+
+.PHONY: nodejs-dependencies
+nodejs-dependencies:
+	$(CONDA) npm install markdownlint-cli2 --global
 
 .PHONY: conda-lock
 conda-lock:
@@ -67,8 +70,8 @@ install:
 .PHONY: environment
 environment: conda-create from-conda-lock pre-commit-install install
 
-.PHONY: refresh-locks
-refresh-locks: conda-create conda-setup conda-dependencies conda-lock pre-commit-install poetry-lock install
+.PHONY: locks
+locks: conda-create conda-setup conda-dependencies nodejs-dependencies conda-lock pre-commit-install poetry-lock install
 
 
 
@@ -84,6 +87,7 @@ formatting:
 	- $(CONDA) black --config pyproject.toml ./
 
 
+
 ###   TESTING   ###
 
 .PHONY: test
@@ -93,6 +97,7 @@ test:
 .PHONY: coverage
 coverage:
 	$(CONDA) coverage report
+
 
 
 ###   LINTING   ###
@@ -109,6 +114,14 @@ mypy:
 
 .PHONY: lint
 lint: check-codestyle mypy
+
+
+
+###   BUILDING   ###
+
+.PHONY: build
+build:
+	$(CONDA) poetry build
 
 
 
@@ -134,6 +147,10 @@ ipynbcheckpoints-remove:
 pytestcache-remove:
 	find . | grep -E ".pytest_cache" | xargs rm -rf
 
+.PHONY: pytest-coverage
+pytest-coverage:
+	rm report.xml coverage.xml .coverage
+
 .PHONY: build-remove
 build-remove:
 	rm -rf build/
@@ -141,13 +158,6 @@ build-remove:
 .PHONY: cleanup
 cleanup: pycache-remove dsstore-remove mypycache-remove ipynbcheckpoints-remove pytestcache-remove
 
-
-
-###   BUILDING   ###
-
-.PHONY: build
-build:
-	$(CONDA) poetry build
 
 
 ###   DOCS   ###
@@ -172,12 +182,10 @@ mkdocs_port := $(shell \
 serve:
 	echo "Served at http://127.0.0.1:$(mkdocs_port)/"
 	$(CONDA) mkdocs serve -a localhost:$(mkdocs_port)
-	- rm -rf 08-api/
 
 .PHONY: docs
 docs:
 	$(CONDA) mkdocs build -d public/
-	- rm -rf 08-api/
 	- rm -f public/gen_ref_pages.py
 
 .PHONY: open-docs
