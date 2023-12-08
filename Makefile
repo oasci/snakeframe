@@ -36,6 +36,7 @@ conda-dependencies:
 
 .PHONY: nodejs-dependencies
 nodejs-dependencies:
+	$(CONDA) conda install -y -c conda-forge nodejs
 	$(CONDA) npm install markdownlint-cli2 --global
 
 .PHONY: conda-lock
