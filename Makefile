@@ -79,6 +79,7 @@ locks: conda-create conda-setup conda-dependencies nodejs-dependencies conda-loc
 
 .PHONY: validate
 validate:
+	- $(CONDA) markdownlint-cli2-fix docs/*
 	- $(CONDA) pre-commit run --all-files
 
 .PHONY: formatting
