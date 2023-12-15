@@ -77,9 +77,6 @@ vcs = "git"
 patterns = [
     "(^__version__\\s*(?::.*?)?=\\s*['\"])[^'\"]*(['\"])",
 ]
-folders = [
-  { path = "conda_poetry_liaison" }
-]
 
 [build-system]
 requires = [
