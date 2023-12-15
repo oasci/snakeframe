@@ -81,6 +81,7 @@ extra:
 extra_css:
   - css/base.css
   - css/colors.css
+  - css/mkdocstrings.css
 
 extra_javascript:
   - javascripts/mathjax.js
