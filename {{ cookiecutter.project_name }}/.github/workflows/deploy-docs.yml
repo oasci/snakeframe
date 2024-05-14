@@ -55,7 +55,7 @@ jobs:
         run: make install
 
       - name: Build documentation
-        run: make docs-versioned
+        run: make docs
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
-          path: './docs/html/'
+          path: 'public/'
 
       - name: Deploy to GitHub Pages
         id: deployment

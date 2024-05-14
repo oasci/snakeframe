@@ -200,17 +200,6 @@ docs:
 	$(CONDA) sphinx-build -nT docs/ public/
 	touch public/.nojekyll
 
-.PHONY: docs-versioned
-docs-versioned:
-	rm -rf public/
-	$(CONDA) sphinx-multiversion -nT docs/ public/
-	touch public/.nojekyll
-
-	# Create html redirect to main
-	echo "<head>" > public/index.html
-	echo "  <meta http-equiv='refresh' content='0; URL=$(DOCS_URL)/main/index.html'>" >> public/index.html
-	echo "</head>" >> public/index.html
-
 .PHONY: open-docs
 open-docs:
 	xdg-open public/index.html 2>/dev/null
