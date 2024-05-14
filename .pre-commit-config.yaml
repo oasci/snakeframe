@@ -14,8 +14,6 @@ repos:
       - id: check-executables-have-shebangs
       - id: check-json
       - id: check-toml
-      - id: check-yaml
-        exclude: "mkdocs.yml"
       - id: detect-private-key
 
   - repo: https://github.com/pycqa/isort
