@@ -1,6 +1,8 @@
 # type: ignore[attr-defined]
 """{{ cookiecutter.project_description }}"""
 
+from typing import Any
+
 import os
 import sys
 from ast import literal_eval
@@ -25,7 +27,7 @@ def enable_logging(
         level: Requested log level: `10` is debug, `20` is info.
         file_path: Also write logs to files here.
     """
-    config = {"handlers": []}
+    config: dict[str, Any] = {"handlers": []}
     if stdout_set:
         config["handlers"].append(
             {"sink": sys.stdout, "level": level_set, "format": LOG_FORMAT}
