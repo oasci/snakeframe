@@ -79,11 +79,12 @@ locks: conda-create conda-setup conda-dependencies nodejs-dependencies conda-loc
 
 .PHONY: validate
 validate:
-	- $(CONDA) markdownlint-cli2 "**.md" --config ./.markdownlint.yaml --fix
+	- $(CONDA) markdownlint-cli2 "**/*.{md,markdown}" --config .markdownlint.yaml
 	- $(CONDA) pre-commit run --all-files
 
 .PHONY: formatting
 formatting:
+	- $(CONDA) markdownlint-cli2 "**/*.{md,markdown}" --fix --config .markdownlint.yaml
 	- $(CONDA) isort --settings-path pyproject.toml ./
 	- $(CONDA) black --config pyproject.toml ./
 
