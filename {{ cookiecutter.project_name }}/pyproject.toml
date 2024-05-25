@@ -21,6 +21,8 @@ mypy = "^1.5.1"
 mypy-extensions = "^1.0.0"
 bump-my-version = "^0.11.0"
 poetry-dynamic-versioning = "^1.1.0"
+ruff = "^0.4.5"
+twine = "^5.0.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.2"
@@ -95,6 +97,31 @@ good-names = [
   "ex"
 ]
 ignore = ["CVS", "conf.py"]
+
+[tool.ruff]
+target-version = "py{{ cookiecutter.dev_python_version.replace('.', '') }}"
+line-length = 88
+indent-width = 4
+exclude = [
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".tox",
+    ".venv",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "env",
+    "venv",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
 
 
 [tool.black]
