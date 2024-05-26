@@ -119,11 +119,19 @@ lint: check-codestyle mypy
 
 
 
-###   BUILDING   ###
+###   DEPLOY   ###
 
 .PHONY: build
 build:
 	$(CONDA) poetry build
+
+.PHONY: publish-test
+publish-test:
+	$(CONDA) python3 -m twine upload --repository testpypi dist/*
+
+.PHONY: publish
+publish:
+	$(CONDA) python3 -m twine upload dist/*
 
 
 
