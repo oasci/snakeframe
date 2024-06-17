@@ -1,4 +1,3 @@
-# type: ignore[attr-defined]
 """{{ cookiecutter.project_description }}"""
 
 from typing import Any
