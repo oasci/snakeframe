@@ -1,8 +1,7 @@
 import os
 
 import pytest
-
-from {{ cookiecutter.project_name }} import enable_logging
+from {{cookiecutter.project_name}} import enable_logging
 
 TEST_DIR = os.path.dirname(__file__)
 

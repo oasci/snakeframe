@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
-PYTHON_VERSION := 3.11
-PYTHON_VERSION_CONDENSED := 311
+PYTHON_VERSION := 3.12
+PYTHON_VERSION_CONDENSED := 312
 PACKAGE_NAME := snakeframe
 PACKAGE_PATH := $(PACKAGE_NAME)/
 TESTS_PATH := tests/
@@ -26,7 +26,6 @@ conda-create:
 conda-setup:
 	$(CONDA) conda install -y -c conda-forge poetry
 	$(CONDA) conda install -y -c conda-forge pre-commit
-	$(CONDA) conda install -y -c conda-forge tomli tomli-w
 	$(CONDA) conda install -y -c conda-forge conda-poetry-liaison
 
 # Conda-only packages specific to this project.
@@ -44,7 +43,6 @@ conda-lock:
 	- rm conda-lock.yml
 	$(CONDA) conda env export --from-history | grep -v "^prefix" > environment.yml
 	$(CONDA) conda-lock -f environment.yml $(CONDA_LOCK_OPTIONS)
-	rm environment.yml
 	$(CONDA) cpl-deps pyproject.toml --env_name $(CONDA_NAME)
 	$(CONDA) cpl-clean --env_name $(CONDA_NAME)
 

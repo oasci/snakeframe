@@ -13,7 +13,6 @@
 import os
 import sys
 
-
 # -- Project information -----------------------------------------------------
 
 project = "{{ cookiecutter.project_name }}"

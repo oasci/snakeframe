@@ -621,11 +621,5 @@ public/
 jupyter_execute
 report.xml
 
-# psi4
-timer.dat
-psi.*.clean
-
 tests/tmp/*
 !tests/tmp/.gitkeep
-
-environment.yml

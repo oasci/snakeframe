@@ -62,10 +62,15 @@ plugins:
       scripts:
         - docs/gen_ref_pages.py
   - mkdocstrings:
+      enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
+      default_handler: python
       handlers:
         python:
           paths: ["snakeframe"]
+          import:
+          - https://docs.python.org/3/objects.inv
           options:
+            show_source: true
             annotations_path: brief
             docstring_style: google
   - awesome-pages:
@@ -74,6 +79,12 @@ plugins:
         order: asc
         sort_type: natural
         order_by: title
+  - glightbox:
+      zoomable: true
+      draggable: false
+      height: auto
+      width: 100%
+  - macros
 
 extra:
   generator: false
@@ -84,10 +95,9 @@ extra:
 extra_css:
   - css/base.css
   - css/colors.css
+  - css/mkdocstrings.css
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:

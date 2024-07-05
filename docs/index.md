@@ -86,10 +86,8 @@ This license grants you the freedom to use, modify, and distribute it as long as
 
 > Portions of this code were incorporated and adapted with permission from [snakeframe](https://github.com/oasci/snakeframe) by OASCI under the [MIT License](https://github.com/oasci/snakeframe/blob/main/LICENSE.md).
 
-[snakeframe]: https://github.com/oasci/snakeframe
 [snakeframe-license]: https://github.com/oasci/snakeframe/blob/main/LICENSE.md
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
-[pyproject.toml]: https://github.com/oasci/snakeframe/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/pyproject.toml
 [poetry]: https://python-poetry.org/
 [conda]: https://conda.org/
 [conda-lock]: https://conda.github.io/conda-lock/

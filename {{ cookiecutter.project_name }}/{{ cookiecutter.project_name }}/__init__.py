@@ -1,10 +1,9 @@
 """{{ cookiecutter.project_description }}"""
 
-from typing import Any
-
 import os
 import sys
 from ast import literal_eval
+from typing import Any
 
 from loguru import logger
 
@@ -43,6 +42,10 @@ def enable_logging(
 
 if literal_eval(os.environ.get("{{ cookiecutter.project_name.upper() }}_LOG", "False")):
     level = int(os.environ.get("{{ cookiecutter.project_name.upper() }}_LOG_LEVEL", 20))
-    stdout = literal_eval(os.environ.get("{{ cookiecutter.project_name.upper() }}_STDOUT", "True"))
-    log_file_path = os.environ.get("{{ cookiecutter.project_name.upper() }}_LOG_FILE_PATH", None)
+    stdout = literal_eval(
+        os.environ.get("{{ cookiecutter.project_name.upper() }}_STDOUT", "True")
+    )
+    log_file_path = os.environ.get(
+        "{{ cookiecutter.project_name.upper() }}_LOG_FILE_PATH", None
+    )
     enable_logging(level, stdout, log_file_path)
