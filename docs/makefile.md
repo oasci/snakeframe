@@ -5,13 +5,17 @@ It provides a standardized set of commands for managing your project's environme
 
 ## Prerequisites
 
--   [GNU Make](https://www.gnu.org/software/make/manual/html_node/index.html) must be installed on your system to use this Makefile.
--   [Conda](https://docs.conda.io/en/latest/) is used for environment and package management.
+You must have the following packages installed on your system:
+
+-   [GNU Make](https://www.gnu.org/software/make/), and
+-   [Conda](https://docs.conda.io/en/latest/).
+
+All other dependencies will be installed within a conda environment.
 
 ## Environment variables
 
 The Makefile for this project utilizes a set of environmental variables to streamline the build process and maintain consistency across different development environments.
-These parameters, defined at the outset of the Makefile, play crucial roles in various tasks throughout the development lifecycle.
+These parameters, defined at the beginning of the Makefile, play crucial roles in various tasks throughout the development lifecycle.
 By centralizing these configuration parameters, we've created a flexible and maintainable build system that can easily adapt to different project requirements while maintaining consistency in our development and build processes.
 
 !!! example
