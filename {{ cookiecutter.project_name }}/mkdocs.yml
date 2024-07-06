@@ -34,9 +34,6 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.code.select
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.tracking
@@ -79,6 +76,12 @@ plugins:
         order: asc
         sort_type: natural
         order_by: title
+  - glightbox:
+      zoomable: true
+      draggable: false
+      height: 80vh
+      width: auto
+  - macros
 
 extra:
   generator: false
