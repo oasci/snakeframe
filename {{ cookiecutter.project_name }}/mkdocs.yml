@@ -1,17 +1,18 @@
-docs_dir: docs
+docs_dir: study
 
 site_name: {{ cookiecutter.project_name }}
 site_author: {{ cookiecutter.organization }}
 
-# Git host
 repo_name: {{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
-repo_url: https://{{ cookiecutter.git_host.lower() }}.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
+repo_url: https://{{ cookiecutter.git_host }}.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
+copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> by OASCI
 
 # https://squidfunk.github.io/mkdocs-material/
 theme:
   name: material
-  custom_dir: docs/.overrides
+  custom_dir: study/.overrides
   language: en
+  logo: img/harbor-logo-square-white.svg
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -28,12 +29,14 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    repo: fontawesome/brands/{{ cookiecutter.git_host.lower() }}
+    repo: fontawesome/brands/github
     annotation: material/star-four-points-circle
   features:
     - content.code.annotate
     - content.code.copy
     - content.code.select
+    - content.tooltips
+    - content.tabs.link
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.tracking
@@ -52,36 +55,33 @@ validation:
 # Options need to be indented twice for some reason?
 plugins:
   - search
-  - autorefs
   - material-plausible
-  - table-reader
-  - gen-files:
-      scripts:
-        - docs/gen_ref_pages.py
-  - mkdocstrings:
-      handlers:
-        python:
-          paths: ["{{ cookiecutter.project_name }}"]
-          options:
-            show_source: false
-            show_root_heading: false
-            annotations_path: brief
-            docstring_style: google
-            merge_init_into_class: true
-            docstring_section_style: spacy
-            show_if_no_docstring: true
+  - mkdocs-jupyter:
+        no_input: False
+        include_requirejs: true
+        include_source: True
+        ignore: ["*.py"]
+        remove_tag_config:
+            remove_input_tags:
+                - hide_code
   - awesome-pages:
         collapse_single_pages: true
         strict: false
         order: asc
         sort_type: natural
         order_by: title
-  - glightbox:
-      zoomable: true
-      draggable: false
-      height: 80vh
-      width: auto
+  - glightbox
   - macros
+  - print-site
+  - git-revision-date-localized:
+      type: iso_datetime
+      timezone: America/Detroit
+      fallback_to_build_date: true
+
+hooks:
+  - hooks/launchy.py
+colab_base_url: https://colab.research.google.com/github/{{cookiecutter.organization}}/{{ cookiecutter.project_name }}/blob/main/study
+
 
 extra:
   generator: false
@@ -89,7 +89,9 @@ extra:
 extra_css:
   - css/base.css
   - css/colors.css
+  - css/mol.css
   - css/mkdocstrings.css
+  - https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css
 
 extra_javascript:
   - js/mathjax-config.js
@@ -130,6 +132,3 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
