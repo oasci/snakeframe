@@ -5,7 +5,7 @@ site_author: oasci
 
 # Github
 repo_name: snakeframe/oasci
-repo_url: https://gitlab.com/oasci/software/snakeframe
+repo_url: https://github.com/oasci/software/snakeframe
 
 # https://squidfunk.github.io/mkdocs-material/
 theme:
@@ -28,7 +28,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    repo: fontawesome/brands/gitlab
+    repo: fontawesome/brands/github
     annotation: material/star-four-points-circle
   features:
     - content.code.annotate
