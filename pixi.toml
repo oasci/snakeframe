@@ -19,6 +19,7 @@ dev = ["dev"]
 docs = ["docs"]
 
 [tasks]
+hx = { cmd = ["hx"] }
 
 [dependencies]
 python = "=3.11"
