@@ -57,7 +57,6 @@ plugins:
   - search
   - autorefs
   - material-plausible
-  - table-reader
   - gen-files:
       scripts:
         - docs/gen_ref_pages.py
@@ -85,6 +84,7 @@ plugins:
       height: 80vh
       width: auto
   - macros
+  - table-reader
 
 extra:
   generator: false
