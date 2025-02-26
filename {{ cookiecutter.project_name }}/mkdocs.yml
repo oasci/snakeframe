@@ -1,4 +1,4 @@
-docs_dir: study
+docs_dir: docs
 
 site_name: {{ cookiecutter.project_name }}
 site_author: {{ cookiecutter.organization }}
@@ -12,7 +12,7 @@ theme:
   name: material
   custom_dir: docs/.overrides
   language: en
-  logo: img/harbor-logo-square-white.svg
+  # logo: img/logo.svg
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -55,7 +55,27 @@ validation:
 # Options need to be indented twice for some reason?
 plugins:
   - search
+  - autorefs
   - material-plausible
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["{{ cookiecutter.project_name }}"]
+          options:
+            show_source: false
+            show_root_heading: false
+            annotations_path: brief
+            docstring_style: google
+            merge_init_into_class: true
+            docstring_section_style: spacy
+            show_if_no_docstring: true
+            show_labels: false
+            parameter_headings: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
   - mkdocs-jupyter:
         no_input: False
         include_requirejs: true
@@ -64,12 +84,7 @@ plugins:
         remove_tag_config:
             remove_input_tags:
                 - hide_code
-  - awesome-pages:
-        collapse_single_pages: true
-        strict: false
-        order: asc
-        sort_type: natural
-        order_by: title
+  - awesome-nav
   - glightbox
   - macros
   - print-site
@@ -89,14 +104,11 @@ extra:
 extra_css:
   - css/base.css
   - css/colors.css
-  - css/mol.css
+  - css/jupyter.css
   - css/mkdocstrings.css
-  - https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css
 
 extra_javascript:
   - js/mathjax-config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
   - abbr

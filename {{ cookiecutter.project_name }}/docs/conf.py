@@ -16,7 +16,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = "{{ cookiecutter.project_name }}"
-copyright = "2023, {{ cookiecutter.user_name }}"
+copyright = "2025, {{ cookiecutter.user_name }}"
 author = "{{ cookiecutter.user_name }}"
 html_title = "{{ cookiecutter.project_name }}"
 
