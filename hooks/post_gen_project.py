@@ -53,7 +53,9 @@ def remove_unused_files(directory: Path) -> None:
     files_to_delete: list[Path] = []
 
     if GIT_HOST == "GitHub":
-        files_to_delete.append(os.path.join(directory, ".gitlab-ci.yml"))
+        gitlab_path = os.path.join(directory, ".gitlab-ci.yml")
+        if os.path.exists(gitlab_path):
+            files_to_delete.append(gitlab_path)
     if GIT_HOST == "GitLab":
         files_to_delete.append(os.path.join(directory, ".github"))
 
