@@ -10,7 +10,7 @@ copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC
 # https://squidfunk.github.io/mkdocs-material/
 theme:
   name: material
-  custom_dir: study/.overrides
+  custom_dir: docs/.overrides
   language: en
   logo: img/harbor-logo-square-white.svg
   palette:
