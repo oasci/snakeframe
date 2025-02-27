@@ -108,6 +108,7 @@ extra_css:
   - css/colors.css
   - css/jupyter.css
   - css/mkdocstrings.css
+  - css/launchy.css
 
 extra_javascript:
   - js/mathjax-config.js
