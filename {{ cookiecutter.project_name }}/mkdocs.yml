@@ -63,6 +63,8 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
+          inventories:
+            - "https://docs.python.org/3/objects.inv"
           paths: ["{{ cookiecutter.project_name }}"]
           options:
             show_source: false
