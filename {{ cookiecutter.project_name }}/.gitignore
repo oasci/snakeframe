@@ -21,3 +21,8 @@ package.json
 # pixi environments
 .pixi
 *.egg-info
+
+# coverage
+coverage.xml
+report.xml
+.coverage
