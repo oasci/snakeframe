@@ -4,21 +4,35 @@
 
 Add information about {{ cookiecutter.project_name }} here.
 
-## Deploying
+## Installation
 
-We use [bump-my-version](https://github.com/callowayproject/bump-my-version) to release a new version.
-This will create a git tag that is used by [poetry-dynamic-version](https://github.com/mtkennerly/poetry-dynamic-versioning) to generate version strings and update `CHANGELOG.md`.
-
-For example, to bump the `minor` version you would run the following command.
+Clone the [repository](https://github.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}):
 
 ```bash
-poetry run bump-my-version bump minor
+git clone git@{{ cookiecutter.git_host.lower() }}.com:{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}.git
 ```
 
-After releasing a new version, you need to push and include all tags.
+Install `{{ cookiecutter.project_name }}` using `pip` after moving into the directory.
+
+```sh
+pip install .
+```
+
+This will install all dependencies and `{{ cookiecutter.project_name }}` into your current Python environment.
+
+## Development
+
+We use [pixi](https://pixi.sh/latest/) to manage Python environments and simplify the developer workflow.
+Once you have [pixi](https://pixi.sh/latest/) installed, move into `{{ cookiecutter.project_name }}` directory (e.g., `cd {{ cookiecutter.project_name }}`) and install the environment using the command
 
 ```bash
-git push --follow-tags
+pixi install
+```
+
+Now you can activate the new virtual environment using
+
+```sh
+pixi shell
 ```
 
 ## License
