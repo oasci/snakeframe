@@ -69,9 +69,17 @@ plugins:
           import:
           - https://docs.python.org/3/objects.inv
           options:
-            show_source: true
+            show_source: false
+            show_root_heading: false
             annotations_path: brief
             docstring_style: google
+            merge_init_into_class: true
+            docstring_section_style: spacy
+            show_if_no_docstring: true
+            show_labels: false
+            parameter_headings: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
   - awesome-pages:
         collapse_single_pages: true
         strict: false
