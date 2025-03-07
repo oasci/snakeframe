@@ -27,7 +27,6 @@ docs = ["docs"]
 python = "={{ cookiecutter.dev_python_version }}"
 
 [feature.dev.dependencies]
-black = ">=23.10.0"
 isort = ">=5.12.0"
 pylint = ">=3.0.1"
 mypy = ">=1.6.0"
@@ -61,6 +60,7 @@ publish = { cmd = ["twine", "upload", "dist/*"] }
 [feature.dev.pypi-dependencies]
 build = ">=1.2.2.post1,<2"
 mypy-extensions = ">=1.0.0"
+black = { version = ">=23.10.0", extras = ["jupyter"] }
 
 [feature.docs.dependencies]
 mkdocs = ">=1.6.1,<2"
@@ -76,9 +76,9 @@ mkdocs-glightbox = ">=0.4.0,<0.5"
 mkdocs-git-revision-date-localized-plugin = ">=1.2.9,<2"
 
 [feature.docs.pypi-dependencies]
-material-plausible-plugin = ">=0.2.0, <0.3"
-mkdocs-print-site-plugin = ">=2.6.0, <3"
-mkdocs-awesome-nav = ">=3.0.0, <4"
+material-plausible-plugin = ">=0.2.0,<0.3"
+mkdocs-print-site-plugin = ">=2.6.0,<3"
+mkdocs-awesome-nav = ">=3.0.0,<4"
 
 [feature.docs.tasks]
 docs = { cmd = ["rm", "-rf", "./public/", "&&", "mkdocs", "build", "-d", "public/"] }
