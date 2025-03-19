@@ -4,7 +4,7 @@ site_name: {{ cookiecutter.project_name }}
 site_author: {{ cookiecutter.organization }}
 
 repo_name: {{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
-repo_url: https://{{ cookiecutter.git_host }}.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
+repo_url: https://{{ cookiecutter.git_host.lower() }}.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}
 copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> by OASCI
 
 # https://squidfunk.github.io/mkdocs-material/
