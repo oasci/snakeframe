@@ -20,7 +20,12 @@ jobs:
           lfs: true
 
       - name: Install pixi
-        uses: prefix-dev/setup-pixi@v0.8.1
+        uses: prefix-dev/setup-pixi@v0.8.3
+        with:
+          locked: false
+          frozen: false
+          cache: true
+          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
 
       - name: Setup environment
         run: pixi install
@@ -29,7 +34,7 @@ jobs:
         run: pixi run tests
 
       - name: Upload to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           env_vars: OS,PYTHON
           fail_ci_if_error: true
