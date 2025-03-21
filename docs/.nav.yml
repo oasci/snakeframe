@@ -1,0 +1,10 @@
+nav:
+  - index.md
+  - Setup: setup.md
+
+sort:
+  type: natural
+  ignore_case: true
+  by: title
+  direction: asc
+flatten_single_child_sections: true

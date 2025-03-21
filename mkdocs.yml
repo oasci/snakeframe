@@ -80,12 +80,7 @@ plugins:
             parameter_headings: false
             show_symbol_type_heading: true
             show_symbol_type_toc: true
-  - awesome-pages:
-        collapse_single_pages: true
-        strict: false
-        order: asc
-        sort_type: natural
-        order_by: title
+  - awesome-nav
   - glightbox:
       zoomable: true
       draggable: false
