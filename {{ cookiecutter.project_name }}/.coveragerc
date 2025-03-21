@@ -3,7 +3,7 @@ branch = true
 source = tests
 
 [paths]
-source = metalflare
+source = {{ cookiecutter.project_name }}
 
 [report]
 show_missing = true

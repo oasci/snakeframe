@@ -37,19 +37,13 @@ pytest-html = ">=4.0.1"
 colorama = ">=0.4.6"
 
 [feature.dev.tasks]
-mdlint = { cmd = ["markdownlint-cli2", '"**/*.{md,markdown}"', "--fix", "--config", ".markdownlint.yaml", "||", "true"] }
-isort = { cmd = ["isort", "--settings-path", ".isort.cfg", "./metalflare", "./tests", "||", "true"] }
-black = { cmd = ["black", "--config", ".black.toml", "./metalflare", "./tests", "||", "true"] }
-format = { depends-on = ["mdlint", "isort", "black"] }
+mdlint = { cmd = ["markdownlint-cli2", '"{{ cookiecutter.project_name }}/*.md"', "docs/*.md", "--fix", "--config", ".markdownlint.yaml", "||", "true"] }
+format = { depends-on = ["mdlint"] }
 tests = { cmd = [
     "PYTHONPATH=.",
     "pytest",
     "-c",
     ".pytest.ini",
-    "--cov='metalflare'",
-    "--cov-report=xml",
-    "--junit-xml=report.xml",
-    "--failed-first",
 ]}
 coverage = { cmd = ["coverage", "report"] }
 cleanup-build = { cmd = ["rm", "-rf", "./build"] }
