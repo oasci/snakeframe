@@ -17,7 +17,10 @@ LOG_FORMAT = (
 
 
 def enable_logging(
-    level_set: int, stdout_set: bool = True, file_path: str | None = None
+    level_set: int,
+    stdout_set: bool = True,
+    file_path: str | None = None,
+    log_format: str = LOG_FORMAT,
 ) -> None:
     r"""Enable logging.
 
@@ -28,11 +31,16 @@ def enable_logging(
     config: dict[str, Any] = {"handlers": []}
     if stdout_set:
         config["handlers"].append(
-            {"sink": sys.stdout, "level": level_set, "format": LOG_FORMAT}
+            {
+                "sink": sys.stdout,
+                "level": level_set,
+                "format": log_format,
+                "colorize": True,
+            }
         )
     if isinstance(file_path, str):
         config["handlers"].append(
-            {"sink": file_path, "level": level_set, "format": LOG_FORMAT}
+            {"sink": file_path, "level": level_set, "format": log_format, "False": True}
         )
     # https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.configure
     logger.configure(**config)
