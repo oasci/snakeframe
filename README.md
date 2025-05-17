@@ -17,7 +17,7 @@ In this [cookiecutter 🍪][cookiecutter] template we combine state-of-the-art l
 ### Development
 
 -   Supports `Python 3.10` and higher.
--   Seamless [`conda`][conda] + [`pip`][pip] dependencies manager with [`pixi`][pixi].
+-   Seamless [`conda`][conda] + [`pip`][pypi] dependencies manager with [`pixi`][pixi].
 -   Automatic codestyle with [`ruff`][ruff] and [`isort`][isort].
 -   Type checks with [`mypy`][mypy].
 -   Testing with [`pytest`][pytest].
