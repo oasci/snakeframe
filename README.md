@@ -16,10 +16,9 @@ In this [cookiecutter 🍪][cookiecutter] template we combine state-of-the-art l
 
 ### Development
 
--   Supports `Python 3.9` and higher.
--   Seamless [`conda`][conda]+[`poetry`][poetry] dependencies manager with [conda][conda-lock] and [poetry][poetry-lock] files.
--   Automatic codestyle with [`black`][black], [`isort`][isort], and [`pylint`][pylint].
--   [`pre-commit`][pre-commit] hooks with code-formatting.
+-   Supports `Python 3.10` and higher.
+-   Seamless [`conda`][conda] + [`pip`][pip] dependencies manager with [`pixi`][pixi].
+-   Automatic codestyle with [`ruff`][ruff] and [`isort`][isort].
 -   Type checks with [`mypy`][mypy].
 -   Testing with [`pytest`][pytest].
 -   Ready-to-use [`.editorconfig`][.editorconfig] and [`.gitignore`][.gitignore].
@@ -27,7 +26,7 @@ In this [cookiecutter 🍪][cookiecutter] template we combine state-of-the-art l
 ### Deployment
 
 -   Github Actions or GitLab pipelines.
--   Everything is already set up for code style checks, code formatting, testing, linting, etc. with [`Makefile`][makefile].
+-   Code style checks, code formatting, testing, linting, etc. already setup with [`pixi tasks`][pixi-tasks].
 -   [`Sphinx`][sphinx] or [`MkDocs`][mkdocs] documentation.
 
 ### Community
@@ -44,11 +43,10 @@ This license grants you the freedom to use, modify, and distribute it as long as
 
 [snakeframe-license]: https://github.com/oasci/snakeframe/blob/main/LICENSE.md
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
-[poetry]: https://python-poetry.org/
+[pypi]: https://pypi.org/
 [conda]: https://conda.org/
-[conda-lock]: https://conda.github.io/conda-lock/
-[poetry-lock]: https://python-poetry.org/docs/basic-usage/#installing-dependencies
-[black]: https://github.com/psf/black
+[pixi]: https://pixi.sh/latest/
+[ruff]: https://docs.astral.sh/ruff/
 [isort]: https://github.com/PyCQA/isort
 [pylint]: https://github.com/pylint-dev/pylint
 [pre-commit]: https://github.com/pre-commit/pre-commit
@@ -56,7 +54,7 @@ This license grants you the freedom to use, modify, and distribute it as long as
 [pytest]: https://docs.pytest.org/en/7.4.x/
 [.editorconfig]: https://github.com/oasci/snakeframe/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/.editorconfig
 [.gitignore]: https://github.com/oasci/snakeframe/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/.gitignore
-[makefile]: https://github.com/oasci/snakeframe/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/Makefile
+[pixi-tasks]: https://pixi.sh/latest/workspace/advanced_tasks/
 [mkdocs]: https://squidfunk.github.io/mkdocs-material/
 [pr-template]: https://github.com/oasci/snakeframe/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/.github/PULL_REQUEST_TEMPLATE.md
 [issue-template]: https://github.com/oasci/snakeframe/tree/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/.github/ISSUE_TEMPLATE

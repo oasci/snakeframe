@@ -7,7 +7,7 @@ channels = ["conda-forge"]
 description = "A cookiecutter template for accessible, reproducible Python packages"
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 version = "0.0.0"
-license = "Apache-2.0"
+license = "MIT"
 license-file = "LICENSE.md"
 readme = "README.md"
 homepage = "https://snakeframe.oasci.org/"
@@ -42,13 +42,8 @@ tests = { cmd = [
     "./tests"
 ]}
 coverage = { cmd = ["coverage", "report"] }
-cleanup-build = { cmd = ["rm", "-rf", "./build"] }
-build = { cmd = ["python3", "-m", "build"], depends-on = ["cleanup-build"]}
-publish-test = { cmd = ["twine", "upload", "--repository", "testpypi", "dist/*"] }
-publish = { cmd = ["twine", "upload", "dist/*"] }
 
 [feature.dev.pypi-dependencies]
-build = ">=1.2.2.post1,<2"
 mypy-extensions = ">=1.1.0"
 
 [feature.docs.dependencies]

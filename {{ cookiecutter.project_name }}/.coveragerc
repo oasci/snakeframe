@@ -1,9 +1,11 @@
 [run]
 branch = true
-source = tests
+data_file = ".coverage"
+source = "tests"
 
 [paths]
 source = {{ cookiecutter.project_name }}
 
 [report]
 show_missing = true
+skip_empty = true

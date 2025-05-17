@@ -1,6 +1,6 @@
 {
   "project_name": "python_project",
-  "project_description": "Awesome `{{ cookiecutter.project_name }}` is a Python package created with https://gitlab.com/oasci/software/snakeframe",
+  "project_description": "Awesome `{{ cookiecutter.project_name }}` is a Python package created with https://github.com/oasci/snakeframe",
   "organization": "{{ cookiecutter.project_name }}",
   "license": ["Apache-2.0", "MIT", "BSD-3-Clause", "GPL-3.0-only"],
   "min_python_version": ["3.10", "3.11", "3.12", "3.13"],
