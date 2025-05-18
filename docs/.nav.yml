@@ -1,6 +1,6 @@
 nav:
   - index.md
-  - Setup: setup.md
+  - Getting started: get-started
 
 sort:
   type: natural
