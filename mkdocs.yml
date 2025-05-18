@@ -4,8 +4,8 @@ site_name: snakeframe
 site_author: oasci
 
 # Github
-repo_name: snakeframe/oasci
-repo_url: https://github.com/oasci/software/snakeframe
+repo_name: oasci/snakeframe
+repo_url: https://github.com/oasci/snakeframe
 
 # https://squidfunk.github.io/mkdocs-material/
 theme:
