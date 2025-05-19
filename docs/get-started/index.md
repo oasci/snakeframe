@@ -19,3 +19,4 @@ curl -sSL https://prefix.dev/install.sh | bash
 ```
 
 After installing Pixi, restart your terminal or ensure `pixi` is in your PATH.
+

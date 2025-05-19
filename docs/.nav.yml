@@ -1,6 +1,35 @@
 nav:
   - index.md
-  - Getting started: get-started
+  - Getting started:
+    - get-started/index.md
+    - Creating your project: get-started/creating/index.md
+    - Project anatomy: get-started/anatomy/index.md
+    - Environment: get-started/env/index.md
+  - Developer workflow:
+    - Developer workflow: workflow/index.md
+    - Version control: workflow/version/index.md
+    - Coding standards: workflow/standards/index.md
+    - Testing: workflow/testing/index.md
+    - Debugging: workflow/debug/index.md
+  - Usability:
+    - usability/index.md
+    - Documentation: usability/docs/index.md
+    - Packaging: usability/package/index.md
+  - Management:
+    - manage/index.md
+    - CI/CD: manage/cicd/index.md
+    - Versioning: manage/versioning/index.md
+    - Collaboration: manage/collab/index.md
+  - Best practices:
+    - bp/index.md
+    - Project structure: bp/structure/index.md
+    - Principles and patterns: bp/pandp/index.md
+    - Configuration: bp/config/index.md
+    - Dependency management: bp/deps/index.md
+    - Application programming interface: bp/api/index.md
+    - Error handling: bp/errors/index.md
+    - Performance and profiling: bp/perf/index.md
+    - Security: bp/security/index.md
 
 sort:
   type: natural
