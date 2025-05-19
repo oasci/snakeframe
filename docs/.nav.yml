@@ -3,7 +3,13 @@ nav:
   - Getting started:
     - get-started/index.md
     - Creating your project: get-started/creating/index.md
-    - Project anatomy: get-started/anatomy/index.md
+    - Project anatomy:
+      - get-started/anatomy/index.md
+      - Root configuration: get-started/anatomy/root/index.md
+      - Source directory: get-started/anatomy/source/index.md
+      - Tests directory: get-started/anatomy/tests/index.md
+      - Documentation directory: get-started/anatomy/docs/index.md
+      - Auxiliary files: get-started/anatomy/aux/index.md
     - Environment: get-started/env/index.md
   - Developer workflow:
     - Developer workflow: workflow/index.md
@@ -14,7 +20,12 @@ nav:
   - Usability:
     - usability/index.md
     - Documentation: usability/docs/index.md
-    - Packaging: usability/package/index.md
+    - Packaging:
+      - usability/package/index.md
+      - Metadata: usability/package/metadata/index.md
+      - Build: usability/package/build/index.md
+      - Publishing: usability/package/pub/index.md
+      - Dependencies: usability/package/deps/index.md
   - Management:
     - manage/index.md
     - CI/CD: manage/cicd/index.md
@@ -23,7 +34,8 @@ nav:
   - Best practices:
     - bp/index.md
     - Project structure: bp/structure/index.md
-    - Principles and patterns: bp/pandp/index.md
+    - Coding principles: bp/principles/index.md
+    - Design patterns: bp/patterns/index.md
     - Configuration: bp/config/index.md
     - Dependency management: bp/deps/index.md
     - Application programming interface: bp/api/index.md
