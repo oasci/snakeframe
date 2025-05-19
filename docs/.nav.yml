@@ -33,10 +33,30 @@ nav:
     - Collaboration: manage/collab/index.md
   - Best practices:
     - bp/index.md
-    - Project structure: bp/structure/index.md
-    - Coding principles: bp/principles/index.md
-    - Design patterns: bp/patterns/index.md
-    - Configuration: bp/config/index.md
+    - Project structure:
+      - bp/structure/index.md
+      - Hierarchy: bp/structure/hierarchy/index.md
+      - Organization: bp/structure/organization/index.md
+    - Coding principles:
+      - bp/principles/index.md
+      - Don't repeat yourself: bp/principles/dry/index.md
+      - Keep It Simple, Stupid: bp/principles/kiss/index.md
+      - You Aren't Gonna Need It: bp/principles/yagni/index.md
+      - Separation of Concerns: bp/principles/soc/index.md
+      - SOLID: bp/principles/solid/index.md
+      - Avoid premature optimization: bp/principles/opt/index.md
+    - Design patterns:
+      - bp/patterns/index.md
+      - Factory: bp/patterns/factory/index.md
+      - Strategy: bp/patterns/strategy/index.md
+      - Adapter: bp/patterns/adapter/index.md
+      - Observer: bp/patterns/observer/index.md
+      - Singleton: bp/patterns/singleton/index.md
+      - Command: bp/patterns/command/index.md
+      - Decorator: bp/patterns/decorator/index.md
+      - Pipeline: bp/patterns/pipeline/index.md
+    - Configuration:
+      - bp/config/index.md
     - Dependency management: bp/deps/index.md
     - Application programming interface: bp/api/index.md
     - Error handling: bp/errors/index.md

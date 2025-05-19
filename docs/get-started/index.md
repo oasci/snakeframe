@@ -14,7 +14,7 @@ Before starting, make sure you have the following tools installed:
 You can install them like this:
 
 ```bash
-pip install cookiecutter
+pipx install cookiecutter
 curl -sSL https://prefix.dev/install.sh | bash
 ```
 
