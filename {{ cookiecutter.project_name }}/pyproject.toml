@@ -1,21 +1,26 @@
 [project]
+name = "{{ cookiecutter.project_name }}"
 authors = [
     {name = "{{ cookiecutter.organization }}", email = "{{ cookiecutter.email }}"}
 ]
 description = "{{ cookiecutter.project_description }}"
-name = "{{ cookiecutter.project_name }}"
-version = "0.0.0"
+dynamic = ["version"]
 readme = "README.md"
 requires-python = ">={{ cookiecutter.min_python_version }}"
 
 # TODO: Keep this here until pixi releases building capabilities
 dependencies = [
-    "loguru>=0.7.2,<0.8",
+    "loguru>=0.7.2,<1.0.0",
 ]
 
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61.0", "setuptools-scm>=8", "wheel"]
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["{{ cookiecutter.project_name }}*"]
+
+[tool.setuptools_scm]
+write_to = "{{ cookiecutter.project_name }}/_version.py"
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-timestamp"

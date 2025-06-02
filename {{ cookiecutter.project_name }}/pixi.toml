@@ -1,12 +1,11 @@
 [project]
+name = "{{ cookiecutter.project_name }}"
 authors = [
     "{{ cookiecutter.user_name }} <{{ cookiecutter.email }}>",
 ]
 channels = ["conda-forge"]
-name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_description }}"
-platforms = ["win-64", "linux-64", "osx-64"]
-version = "0.0.0"
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 license = "Apache-2.0"
 readme = "README.md"
 
@@ -20,7 +19,7 @@ docs = ["docs"]
 [tasks]
 
 [dependencies]
-python = "={{ cookiecutter.dev_python_version }}"
+python = ">={{ cookiecutter.min_python_version }}"
 
 [feature.dev.dependencies]
 isort = ">=5.12.0"
@@ -61,6 +60,7 @@ build = ">=1.2.2.post1,<2"
 mypy-extensions = ">=1.0.0"
 black = { version = ">=23.10.0", extras = ["jupyter"] }
 pyrefly = ">=0.16.1, <1"
+setuptools-scm = ">=8.0.0"
 
 [feature.docs.dependencies]
 mkdocs = ">=1.6.1,<2"
