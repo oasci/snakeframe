@@ -37,8 +37,8 @@ twine = ">=6.1.0,<7"
 [feature.dev.tasks]
 mdlint = { cmd = ["markdownlint-cli2", '"**/*.{md,markdown}"', "--fix", "--config", ".markdownlint.yaml", "||", "true"] }
 isort = { cmd = ["isort", "--settings-path", ".isort.cfg", "./{{ cookiecutter.project_name }}", "./tests", "||", "true"] }
-black = { cmd = ["black", "--config", ".black.toml", "./{{ cookiecutter.project_name }}", "./tests", "||", "true"] }
-format = { depends-on = ["mdlint", "isort", "black"] }
+ruff = { cmd = ["ruff", "--config", ".ruff.toml", "./{{ cookiecutter.project_name }}", "./tests", "||", "true"] }
+format = { depends-on = ["mdlint", "isort", "ruff"] }
 tests = { cmd = [
     "PYTHONPATH=.",
     "pytest",
